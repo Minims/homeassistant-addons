@@ -3,7 +3,7 @@
   "version": "0.1.5",
   "slug": "somfy-protect-2-mqtt",
   "description": "Publish Somfy Home Alarm as MQTT messages",
-  "url": "https://github.com/schumijo/homeassistant-addons/tree/main/SomfyProtect2MQTT",
+  "url": "https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
   "boot": "auto",
