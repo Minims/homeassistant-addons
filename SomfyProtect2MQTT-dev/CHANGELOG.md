@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.6
+
+- Add Manual Snapshot mode
+- Add Old MyFox Security Camera
+- Add Smoke Detector
+- Add Extender
+
 ## 0.1.5
 
 - Fix homeassistant_config schema
