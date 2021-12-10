@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.7
+- Fix request_token
+
 ## 0.1.6
 
 - Add Manual Snapshot mode

@@ -1,6 +1,6 @@
 {
   "name": "SomfyProtect2MQTT-dev",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "slug": "somfy-protect-2-mqtt-dev",
   "description": "Publish Somfy Home Alarm as MQTT messages (dev branch)",
   "url": "https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT-dev",

@@ -40,6 +40,7 @@ mqtt:
   ha_discover_prefix: homeassistant
 delay_site: '10'
 delay_device: '60'
+manual_snapshot: false
 debug: false
 ```
 ### Option group `somfy_protect`
@@ -97,6 +98,12 @@ Define delay in seconds to update sites.
 ### Option `delay_device`
 
 Define delay in seconds to update devices.
+
+### Option `manual_snapshot`
+
+Enable/Disable manual_snapshot.
+false: Only update snapshot when switch 'snapshot' is triggered
+true: snapshot auto update every 1min.
 
 ### Option `debug`
 

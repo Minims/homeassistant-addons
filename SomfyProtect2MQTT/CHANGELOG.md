@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.7
+- Fix request_token
+- Add Manual Snapshot mode
+- Add Old MyFox Security Camera
+- Add Smoke Detector
+- Add Extender
+
 ## 0.1.6
 
 - Use SomfyProtect2MQTT 0.1.3
