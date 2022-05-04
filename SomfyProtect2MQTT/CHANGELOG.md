@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8
+- Add MQTT ssl
+- Bump SomfyProtect2MQTT 0.1.7 (Big Changes)
+
 ## 0.1.7
 - Fix request_token
 - Add Manual Snapshot mode

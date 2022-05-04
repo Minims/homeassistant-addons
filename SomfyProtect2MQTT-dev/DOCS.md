@@ -33,6 +33,7 @@ homeassistant_config:
 mqtt:
   host: 192.168.1.1
   port: '1883'
+  ssl: false
   username: homeassistant
   password: homeassistant
   client-id: somfy-protect
@@ -75,7 +76,7 @@ Set to `false` if you want to disarm without code
 
 The following options are for the option group: `mqtt`.
 
-#### Options `host`, `port`, `username` and `password`
+#### Options `host`, `port`, `ssl`, `username` and `password`
 
 Host and credentials to use to authenticate to MQTT broker.
 
