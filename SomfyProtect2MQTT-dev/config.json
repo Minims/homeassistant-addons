@@ -1,6 +1,6 @@
 {
   "name": "SomfyProtect2MQTT-dev",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "slug": "somfy-protect-2-mqtt-dev",
   "description": "Publish Somfy Home Alarm as MQTT messages (dev branch)",
   "url": "https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT-dev",
@@ -21,6 +21,7 @@
     "mqtt": {
       "host": "192.168.x.x",
       "port": 1883,
+      "ssl": false,
       "username": "homeassistant",
       "password": "homeassistant",
       "client-id": "somfy-protect",
@@ -46,6 +47,7 @@
     "mqtt": {
       "host": "str",
       "port": "int",
+      "ssl": "bool",
       "username": "str?",
       "password": "str?",
       "client-id": "str?",
