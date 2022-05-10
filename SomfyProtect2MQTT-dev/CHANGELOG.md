@@ -1,9 +1,18 @@
 # Changelog
 
+## 0.1.9
+
+- Add some new entities
+- Fix Websocket Refresh Token
+- Add motion sensor when alarm is triggered
+
 ## 0.1.8
+
 - Add MQTT ssl
 - Bump SomfyProtect2MQTT
+
 ## 0.1.7
+
 - Fix request_token
 
 ## 0.1.6

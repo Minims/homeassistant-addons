@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 # SomfyProtect2MQTT version
-ARG VERSION=0.1.7
+ARG VERSION=0.1.8
 # Install required packages
 RUN apk add --no-cache py3-pip
 RUN pip3 install python-json2yaml

@@ -1,17 +1,25 @@
 {
   "name": "SomfyProtect2MQTT",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "slug": "somfy-protect-2-mqtt",
   "description": "Publish Somfy Home Alarm as MQTT messages",
   "url": "https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT",
-  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "arch": [
+    "armhf",
+    "armv7",
+    "aarch64",
+    "amd64",
+    "i386"
+  ],
   "startup": "application",
   "boot": "auto",
   "options": {
     "somfy_protect": {
       "username": "mail@example.org",
       "password": "iliketurtles",
-      "sites": ["Maison"]
+      "sites": [
+        "Maison"
+      ]
     },
     "homeassistant_config": {
       "code": "0",
@@ -37,7 +45,9 @@
     "somfy_protect": {
       "username": "str",
       "password": "str",
-      "sites": ["str"]
+      "sites": [
+        "str"
+      ]
     },
     "homeassistant_config": {
       "code": "int?",
