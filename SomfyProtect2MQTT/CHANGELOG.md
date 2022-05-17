@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.9.4
+## 0.1.9.5
 
 - Update Add-on to new S6: https://developers.home-assistant.io/blog/2022/05/12/s6-overlay-base-images/
 
