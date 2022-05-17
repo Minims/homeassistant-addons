@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: Minims Home Assistant add-on repository
+url: 'https://github.com/Minims/homeassistant-addons'
+maintainer: Minims

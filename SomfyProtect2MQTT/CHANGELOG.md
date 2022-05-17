@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.9.2
+
+- Update Add-on to new S6: https://developers.home-assistant.io/blog/2022/05/12/s6-overlay-base-images/
+
 ## 0.1.9
 
 - Add some new entities
@@ -9,19 +13,18 @@
 ## 0.1.8
 
 - Add MQTT ssl
-- Bump SomfyProtect2MQTT 0.1.7 (Big Changes)
+- Bump SomfyProtect2MQTT
 
 ## 0.1.7
 
 - Fix request_token
+
+## 0.1.6
+
 - Add Manual Snapshot mode
 - Add Old MyFox Security Camera
 - Add Smoke Detector
 - Add Extender
-
-## 0.1.6
-
-- Use SomfyProtect2MQTT 0.1.3
 - Change default code value to 0
 
 ## 0.1.5
@@ -48,14 +51,13 @@
 
 ## 0.1.1
 
-- Use SomfyProtect2MQTT 0.1.1 (Improve device update on action and camera snapshot refresh)
+- Changed tar link
 
 ## 0.1.0
 
-- Addon renamed "SomfyProtect2MQTT"
+- Addon renamed "SomfyProtect2MQTT-dev"
 - Lot of code rewritten (thanks to @Minims)
-- Migrate to Minims/SomfyProtect2MQTT master branch
-- Based on release v0.1.0b
+- Based on dev branch
 - Added logo, icon, changelog, docs...
 
 ## 0.0.1 to 0.0.4
