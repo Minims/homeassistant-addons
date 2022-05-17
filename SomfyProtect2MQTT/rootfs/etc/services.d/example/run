@@ -24,4 +24,4 @@ fi
 
 bashio::log.info "Image build"
 bashio::log.info "starting original stuff..."
-exec /usr/bin/SomfyProtect2MQTT/somfyProtect2Mqtt/main.py $debug
+exec python3 /usr/bin/SomfyProtect2MQTT/somfyProtect2Mqtt/main.py $debug

@@ -1,7 +1,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 ---
 name: SomfyProtect2MQTT-dev
-version: 0.1.9.3
+version: 0.1.9.4
 slug: somfy-protect-2-mqtt-dev
 description: Publish Somfy Home Alarm as MQTT messages (dev branch)
 url: https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT-dev
@@ -14,6 +14,7 @@ arch:
 init: false
 map:
   - share:rw
+  - config:rw
 options:
   somfy_protect:
     username: mail@example.org
