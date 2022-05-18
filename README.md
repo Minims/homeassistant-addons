@@ -54,4 +54,4 @@ Notes to developers after forking or using the github template feature:
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 
-Many Thanks to @schumijo for his work on this addon !
+Many Thanks to [schumijo](https://github.com/schumijo) for his work on this addon !
