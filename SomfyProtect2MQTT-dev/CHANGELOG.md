@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1
+
+- Add IntellTag Motion Sensor (Alpha)
+- Fix Update Device/Site
+
 ## 0.2.0
 
 - Fix intellitag door type
