@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- Fix recalibration_required
+
 ## 0.2.1
 
 - Add IntellTag Motion Sensor (Alpha)
