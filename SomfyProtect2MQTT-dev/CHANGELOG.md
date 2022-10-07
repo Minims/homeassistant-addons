@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3
+
+- Fix battery_low
+
 ## 0.2.2
 
 - Fix recalibration_required
