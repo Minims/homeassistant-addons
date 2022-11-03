@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.4
+
+- Fix security.level.change
+
 ## 0.2.3
 
 - Fix battery_low
