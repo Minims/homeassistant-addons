@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.5
+
+- Add Debug log on Site and Devices
+- Add interndoor type
+
 ## 0.2.4
 
 - Fix security.level.change
