@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.2.6
+
+- Update device after action
+- Update shutter_state switch
+- Fix lighting_state switch
+- Update lighting_state
+- Add new sensors/switchs
+- Add generic update device
+- Add User api calls
+- Add User Model
+- Update Action List
+- Update version to 0.2.6
+- Remove signal_strength device_class on % signal
+
 ## 0.2.5
 
 - Add Debug log on Site and Devices

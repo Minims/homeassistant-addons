@@ -13,4 +13,4 @@ labels:
   org.opencontainers.image.licenses: "Apache License 2.0"
 args:
 
-  VERSION: "0.2.5"
+  VERSION: "0.2.6"
