@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.7
+
+- Wait 2 sec to upadte device after action.
+- Add GET scenarios-core & scenario (for later usage)
+- Update README
+- Add Reboot / Halt button for Camera and Link
+- Fix smart_alarm_duration
+
 ## 0.2.6
 
 - Update device after action
