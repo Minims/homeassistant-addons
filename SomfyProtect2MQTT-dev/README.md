@@ -1,5 +1,7 @@
 # Home Assistant Add-on: SomfyProtect2MQTT-dev
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/minims)
+
 [somfyprotect2mqtt]: https://github.com/Minims/SomfyProtect2MQTT
 
 ![Supports aarch64 Architecture][aarch64-shield]

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.8
+
+- Fix smart_alarm_duration & lighting_trigger
+
 ## 0.2.7
 
 - Wait 2 sec to upadte device after action.
