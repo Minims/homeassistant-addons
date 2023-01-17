@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.9
+
+- Fix ambient_light_threshold & smart_alarm_duration
+
 ## 0.2.8
 
 - Fix smart_alarm_duration & lighting_trigger
