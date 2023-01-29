@@ -1,6 +1,8 @@
 # Changelog
 
-## 0.0.0c
+## 0.0.1
 
 - Initial version
-- Use for addon developpement
+- Expose Alarm Control Panel
+- ARM_AWAY / ARM_NIGHT / Alarm Status
+- Some devices are exposed as entity with their configuration.

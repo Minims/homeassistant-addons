@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 # MyFox2MQTT version
-ARG VERSION=0.0.0c
+ARG VERSION=0.0.1
 
 # Install required packages
 RUN apk add --no-cache py3-pip
