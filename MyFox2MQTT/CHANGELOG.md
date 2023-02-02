@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.2
+
+- Add Evology Alarm
+- Fix devices status
+
 ## 0.0.1
 
 - Initial version

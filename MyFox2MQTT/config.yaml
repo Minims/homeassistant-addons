@@ -1,16 +1,16 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 ---
 name: MyFox2MQTT
-version: 0.0.1
+version: 0.0.2
 slug: myfox-2-mqtt
 description: Publish MyFox Alarm as MQTT messages
 url: https://github.com/Minims/homeassistant-addons/tree/main/MyFox2MQTT
 arch:
-- armhf
-- armv7
-- aarch64
-- amd64
-- i386
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
 init: false
 map:
   - share:rw
@@ -21,9 +21,9 @@ options:
     client_id: clientid
     client_secret: clientsecret
     sites:
-    - Maison
+      - Maison
   homeassistant_config:
-    code: '0'
+    code: "0"
     code_arm_required: false
     code_disarm_required: false
   mqtt:
@@ -35,8 +35,8 @@ options:
     client-id: myfox
     topic_prefix: MyFox2mqtt
     ha_discover_prefix: homeassistant
-  delay_site: '10'
-  delay_device: '60'
+  delay_site: "10"
+  delay_device: "60"
   manual_snapshot: false
   debug: false
 schema:
@@ -46,7 +46,7 @@ schema:
     client_id: str
     client_secret: str
     sites:
-    - str
+      - str
   homeassistant_config:
     code: int?
     code_arm_required: bool
