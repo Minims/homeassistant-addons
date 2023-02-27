@@ -1,5 +1,11 @@
 # Changelog
 
+## 2023.3.0
+
+- Add Temperature Device
+- Add Smoke state
+- Prepare Snapshot
+
 ## 0.0.2
 
 - Add Evology Alarm
