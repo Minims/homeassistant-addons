@@ -6,11 +6,11 @@ slug: somfy-protect-2-mqtt
 description: Publish Somfy Home Alarm as MQTT messages
 url: https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT
 arch:
-- armhf
-- armv7
-- aarch64
-- amd64
-- i386
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
 init: false
 map:
   - share:rw
@@ -19,9 +19,9 @@ options:
     username: mail@example.org
     password: iliketurtles
     sites:
-    - Maison
+      - Maison
   homeassistant_config:
-    code: '0'
+    code: "0"
     code_arm_required: false
     code_disarm_required: false
   mqtt:
@@ -33,8 +33,8 @@ options:
     client-id: somfy-protect
     topic_prefix: somfyProtect2mqtt
     ha_discover_prefix: homeassistant
-  delay_site: '10'
-  delay_device: '60'
+  delay_site: "10"
+  delay_device: "60"
   manual_snapshot: false
   debug: false
 schema:
@@ -42,7 +42,7 @@ schema:
     username: str
     password: str
     sites:
-    - str
+      - str
   homeassistant_config:
     code: int?
     code_arm_required: bool
@@ -60,4 +60,3 @@ schema:
   delay_device: int?
   manual_snapshot: bool
   debug: bool
-#image: "ghcr.io/home-assistant/{arch}-addon-minims"

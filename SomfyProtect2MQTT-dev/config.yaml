@@ -60,4 +60,3 @@ schema:
   delay_device: int?
   manual_snapshot: bool
   debug: bool
-#image: "ghcr.io/home-assistant/{arch}-addon-minims"
