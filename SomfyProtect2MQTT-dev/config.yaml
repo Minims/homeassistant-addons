@@ -5,7 +5,6 @@ version: 0.2.9a
 slug: somfy-protect-2-mqtt-dev
 description: "Publish Somfy Home Alarm as MQTT messages (dev branch)"
 url: https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT-dev
-startup: application
 arch:
   - armhf
   - armv7
