@@ -34,15 +34,15 @@ homeassistant_config:
 
 mqtt:
   host: 192.168.1.1
-  port: '1883'
+  port: "1883"
   ssl: false
   username: homeassistant
   password: homeassistant
   client-id: myfox
   topic_prefix: MyFox2mqtt
   ha_discover_prefix: homeassistant
-delay_site: '10'
-delay_device: '60'
+delay_site: "10"
+delay_device: "60"
 manual_snapshot: false
 debug: false
 ```
