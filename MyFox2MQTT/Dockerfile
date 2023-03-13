@@ -8,7 +8,7 @@ ARG VERSION=2023.3.0
 
 # Install required packages
 RUN apk add --no-cache py3-pip
-RUN pip3 install python-json2yaml
+RUN pip3 install --no-cache-dir python-json2yaml==0.1.1
 
 # Download source and untar
 WORKDIR /usr/bin
@@ -18,7 +18,7 @@ RUN mv /usr/bin/MyFox2MQTT-${VERSION} /usr/bin/MyFox2MQTT
 
 # Install python3 requirements
 WORKDIR /usr/bin/MyFox2MQTT/myFox2Mqtt
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy root filesystem
-COPY rootfs /
+ADD rootfs /
