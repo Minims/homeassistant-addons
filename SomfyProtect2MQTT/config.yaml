@@ -1,5 +1,5 @@
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 ---
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: SomfyProtect2MQTT
 version: 0.2.9
 slug: somfy-protect-2-mqtt

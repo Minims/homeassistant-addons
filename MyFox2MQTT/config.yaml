@@ -1,5 +1,5 @@
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 ---
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: MyFox2MQTT
 version: 2023.3.0
 slug: myfox-2-mqtt
