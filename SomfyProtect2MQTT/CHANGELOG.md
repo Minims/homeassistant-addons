@@ -1,5 +1,15 @@
 # Changelog
 
+## 2023.6.0
+
+- Change Versioning to 2023.6.0
+- Add some detailled log to debug
+- Update Requirements
+- Add scenarios in logs for some future features
+- Improve WebSocket
+- Breaking Change: update device_lost binary_sensor to device_tracker
+- Fix Typo in device_lost / presence
+
 ## 0.2.9
 
 - Fix ambient_light_threshold & smart_alarm_duration
