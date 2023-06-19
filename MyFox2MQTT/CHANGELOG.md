@@ -1,5 +1,10 @@
 # Changelog
 
+## 2023.6.0
+
+- Fix update Site status
+- Get Site History Alpha (Retrieve & Push to MQTT // No device for now)
+
 ## 2023.3.0
 
 - Add Temperature Device

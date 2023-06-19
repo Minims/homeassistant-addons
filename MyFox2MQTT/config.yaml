@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: MyFox2MQTT
-version: 2023.3.0
+version: 2023.6.0
 slug: myfox-2-mqtt
 description: Publish MyFox Alarm as MQTT messages
 url: https://github.com/Minims/homeassistant-addons/tree/main/MyFox2MQTT
