@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.6.1
+
+- Clean old binary_sensor device_lost
+
 ## 2023.6.0
 
 - Change Versioning to 2023.6.0
