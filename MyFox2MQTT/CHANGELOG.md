@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.6.1
+
+- Fix Site History Alpha
+
 ## 2023.6.0
 
 - Fix update Site status
