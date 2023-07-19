@@ -1,5 +1,10 @@
 # Changelog
 
+## 2023.7.0
+
+- Update requirements
+- Fix installation failure because of PyYaml
+
 ## 2023.6.1
 
 - Clean old binary_sensor device_lost
