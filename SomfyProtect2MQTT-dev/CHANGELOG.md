@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.8.0
+
+- Improve WebSocket messages
+
 ## 2023.7.0
 
 - Update requirements
