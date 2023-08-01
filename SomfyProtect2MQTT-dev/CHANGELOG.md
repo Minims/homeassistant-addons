@@ -1,5 +1,10 @@
 # Changelog
 
+## 2023.8.1
+
+- Fix Load Issue
+- Retain all MQTT Messages
+
 ## 2023.8.0
 
 - Improve WebSocket messages
