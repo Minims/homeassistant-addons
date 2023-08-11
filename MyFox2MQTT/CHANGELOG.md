@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.8.0
+
+- Update MQTT to feat HA 2023.8.0
+
 ## 2023.6.1
 
 - Fix Site History Alpha
