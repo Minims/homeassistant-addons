@@ -1,5 +1,11 @@
 # Changelog
 
+## 2023.8.2
+
+- Test Siren buttons
+- Update MQTT to feat HA 2023.8.0
+- Improve WebSocket
+
 ## 2023.8.1
 
 - Fix Load Issue
