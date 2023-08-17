@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.8.3
+
+- Add Watermark on snapshot
+
 ## 2023.8.2
 
 - Test Siren buttons

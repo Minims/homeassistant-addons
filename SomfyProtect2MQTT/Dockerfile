@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 # SomfyProtect2MQTT version
-ARG VERSION=2023.8.2
+ARG VERSION=2023.8.3
 
 # Install required packages
 RUN apk add --no-cache py3-pip
