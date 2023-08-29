@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.9.0
+
+- Manage Shutter
+
 ## 2023.8.0
 
 - Update MQTT to feat HA 2023.8.0
