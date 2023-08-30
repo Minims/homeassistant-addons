@@ -1,5 +1,10 @@
 # Changelog
 
+## 2023.9.1
+
+- Try to add History
+- Try to fix Shutter
+
 ## 2023.9.0
 
 - Manage Shutter

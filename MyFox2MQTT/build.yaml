@@ -12,4 +12,4 @@ labels:
   org.opencontainers.image.source: "https://github.com/Minims/homeassistant-addons"
   org.opencontainers.image.licenses: "Apache License 2.0"
 args:
-  VERSION: "2023.9.0"
+  VERSION: "2023.9.1"
