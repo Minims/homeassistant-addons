@@ -1,5 +1,10 @@
 # Changelog
 
+## 2023.9.2
+
+- Fix add History in MQTT text
+- Fix add Shutter Open, Close, Stop (is My)
+
 ## 2023.9.1
 
 - Try to add History
