@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 # Install required packages
-RUN apk add --no-cache py3-pip
+RUN apk add --no-cache py3-pip py3-opencv ffmpeg
 RUN pip3 install --no-cache-dir python-json2yaml==0.1.1
 
 # Download source and untar
@@ -15,7 +15,7 @@ RUN mv /usr/bin/SomfyProtect2MQTT-dev /usr/bin/SomfyProtect2MQTT
 
 # Install python3 requirements
 WORKDIR /usr/bin/SomfyProtect2MQTT/somfyProtect2Mqtt
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements_addon.txt
 
 # Copy root filesystem
 ADD rootfs /
