@@ -1,5 +1,11 @@
 # Changelog
 
+## 2023.9.1
+
+- Fix: Test Siren buttons
+- Feat: Add Beta Video Streaming
+  https://github.com/Minims/SomfyProtect2MQTT#video-streaming
+
 ## 2023.8.3
 
 - Add Watermark on snapshot
