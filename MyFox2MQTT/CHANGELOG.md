@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.9.3
+
+- Fix: Only push new History events
+
 ## 2023.9.2
 
 - Fix add History in MQTT text
