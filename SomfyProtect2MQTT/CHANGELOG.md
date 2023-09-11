@@ -1,5 +1,19 @@
 # Changelog
 
+## 2023.9.2
+
+- fix: supported_fetaures to 14
+  https://github.com/Minims/SomfyProtect2MQTT/issues/55
+
+  It won't be automatically fixed.
+  You have to remove the alarm device first.
+  Then restart the Addon.
+  Update your lovelave entity & automatation.
+
+  If i make the update on my side,
+  the alarm device can change his name (installation before 2023.8.0)
+  and it will break your automation & dashboard.
+
 ## 2023.9.1
 
 - Fix: Test Siren buttons
