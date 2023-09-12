@@ -1,5 +1,10 @@
 # Changelog
 
+## 2023.9.3
+
+- fix: MQTT True/False Command
+- fix: restart process on failure
+
 ## 2023.9.2
 
 - fix: supported_fetaures to 14
