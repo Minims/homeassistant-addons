@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.9.4
+
+- fix: CPU Load
+
 ## 2023.9.3
 
 - fix: MQTT True/False Command
