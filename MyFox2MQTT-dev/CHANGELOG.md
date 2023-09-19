@@ -1,0 +1,1 @@
+../MyFox2MQTT/CHANGELOG.md
