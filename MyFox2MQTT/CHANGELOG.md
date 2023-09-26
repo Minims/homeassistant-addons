@@ -1,5 +1,11 @@
 # Changelog
 
+## 2023.10.0
+
+- feature: add scenarios actions
+- feature: add sockets actions
+- fix: encode UTF-8 history
+
 ## 2023.9.3
 
 - Fix: Only push new History events
