@@ -1,5 +1,10 @@
 # Changelog
 
+## 2023.10.1
+
+- fix: entity history name/id
+- fix: Clean motion_sensor on Intellitag
+
 ## 2023.10.0
 
 - feature: add scenarios actions
