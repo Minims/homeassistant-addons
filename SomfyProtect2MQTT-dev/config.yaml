@@ -41,6 +41,7 @@ options:
   delay_site: "10"
   delay_device: "60"
   manual_snapshot: false
+  streaming: mqtt
   debug: false
 schema:
   somfy_protect:
@@ -64,4 +65,5 @@ schema:
   delay_site: int?
   delay_device: int?
   manual_snapshot: bool
+  streaming: str?
   debug: bool

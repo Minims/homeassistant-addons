@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.10.0
+
+- feature: Allow camera streaming via MQTT Camera OR WebRTC Camera (go2rtc)
+
 ## 2023.9.4
 
 - fix: CPU Load

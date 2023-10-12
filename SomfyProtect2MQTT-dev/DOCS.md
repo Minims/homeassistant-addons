@@ -32,16 +32,17 @@ homeassistant_config:
 
 mqtt:
   host: 192.168.1.1
-  port: "1883"
+  port: '1883'
   ssl: false
   username: homeassistant
   password: homeassistant
   client-id: somfy-protect
   topic_prefix: somfyProtect2mqtt
   ha_discover_prefix: homeassistant
-delay_site: "10"
-delay_device: "60"
+delay_site: '10'
+delay_device: '60'
 manual_snapshot: false
+streaming: mqtt
 debug: false
 ```
 
@@ -106,6 +107,14 @@ Define delay in seconds to update devices.
 Enable/Disable manual_snapshot.
 false: Only update snapshot when switch 'snapshot' is triggered
 true: snapshot auto update every 1min.
+
+### Option `streaming`
+
+Streaming Mode.
+mqtt: Send image by image to MQTT camera in HA
+go2rtc: write the url in /config/somfyprotect2mqtt/stream*url*<device_id>
+to be read with echo source: https://github.com/AlexxIT/go2rtc#source-echo
+and WebRTC Camera:https://github.com/AlexxIT/WebRTC
 
 ### Option `debug`
 
