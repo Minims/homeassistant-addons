@@ -1,5 +1,13 @@
 # Changelog
 
+## 2023.10.2
+
+- fix: always push last history event
+- feature: add state
+- feature: add gate
+- fix: close shutter
+- feature: add light level
+
 ## 2023.10.1
 
 - fix: entity history name/id
