@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.11.0
+
+- fix: do not ask for snapshot if shutter is closed
+
 ## 2023.10.0
 
 - feature: Allow camera streaming via MQTT Camera OR WebRTC Camera (go2rtc)
