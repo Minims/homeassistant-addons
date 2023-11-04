@@ -1,5 +1,10 @@
 # Changelog
 
+## 2023.11.0
+
+- fix: gate action
+- fix: try to fix history
+
 ## 2023.10.2
 
 - fix: always push last history event
