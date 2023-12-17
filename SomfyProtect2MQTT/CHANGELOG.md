@@ -1,5 +1,10 @@
 # Changelog
 
+## 2023.12.0
+
+- fix: Improve WebSocket
+- chore: Update requirements
+
 ## 2023.11.0
 
 - fix: do not ask for snapshot if shutter is closed
