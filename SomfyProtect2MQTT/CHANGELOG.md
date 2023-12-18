@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023.12.1
+
+- fix: reduce WebSocket time before restart
+
 ## 2023.12.0
 
 - fix: Improve WebSocket
