@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024.1.0
+
+- fix: default value for update_available
+
 ## 2023.12.2
 
 - fix: Immediate Alarm Status on update
