@@ -1,5 +1,11 @@
 # Changelog
 
+## 2024.3.0
+
+- fix: remove human_detect_enabled
+- chore: set version to 2024.3.0
+- feature: Add device_class motion for PIR and safety for IntelliTag
+
 ## 2024.1.0
 
 - fix: default value for update_available

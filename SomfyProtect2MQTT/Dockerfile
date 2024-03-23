@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 # SomfyProtect2MQTT version
-ARG VERSION=2024.1.0
+ARG VERSION=2024.3.0
 
 # Install required packages
 RUN apk add --no-cache py3-pip py3-opencv ffmpeg
