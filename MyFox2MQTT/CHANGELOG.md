@@ -1,5 +1,10 @@
 # Changelog
 
+## 2024.9.1
+
+- fix: logfile for Docker image
+- fix: Timezone for history
+
 ## 2023.11.0
 
 - fix: gate action
