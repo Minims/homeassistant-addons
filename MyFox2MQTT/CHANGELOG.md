@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024.9.2
+
+- fix: resubscribe to all topic on MQTT reconnect
+
 ## 2024.9.1
 
 - fix: logfile for Docker image
