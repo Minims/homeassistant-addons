@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024.9.0
+
+- fix: resubscribe to all topic on MQTT reconnect
+
 ## 2024.3.0
 
 - fix: remove human_detect_enabled
