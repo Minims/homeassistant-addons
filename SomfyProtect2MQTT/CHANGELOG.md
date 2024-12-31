@@ -1,5 +1,14 @@
 # Changelog
 
+## 2025.1.0
+
+feature: Add videophone like v500 (ringing, snapshot, open gate, etc.)
+feature: Add History
+feature: Add Video Events
+visiophone: write clip to /media folder
+visiophone: save snapshot/video to media folder for visiophone
+fix: try to use asyncio on websocket
+
 ## 2024.9.0
 
 - fix: resubscribe to all topic on MQTT reconnect
