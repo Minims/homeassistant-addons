@@ -1,6 +1,10 @@
 # Changelog
 
-## 2025.1.0
+## 2025.1.2
+
+fix: json2yaml error
+
+## 2025.1.1
 
 visiophone: fix missing dependencies
 

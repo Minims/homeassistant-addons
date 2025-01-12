@@ -7,8 +7,7 @@ ENV LANG C.UTF-8
 ARG VERSION=2025.1.0
 
 # Install required packages
-RUN apk add --no-cache py3-pip py3-opencv ffmpeg libjxl-tools libjxl
-RUN pip3 install --no-cache-dir python-json2yaml==0.1.1
+RUN apk add --no-cache py3-pip py3-opencv ffmpeg libjxl-tools libjxl yq
 
 # Download source and untar
 WORKDIR /usr/bin
