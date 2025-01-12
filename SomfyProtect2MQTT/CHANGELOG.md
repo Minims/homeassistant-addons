@@ -2,6 +2,10 @@
 
 ## 2025.1.0
 
+visiophone: fix missing dependencies
+
+## 2025.1.0
+
 feature: Add videophone like v500 (ringing, snapshot, open gate, etc.)
 feature: Add History
 feature: Add Video Events
