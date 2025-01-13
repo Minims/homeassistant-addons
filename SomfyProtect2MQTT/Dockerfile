@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 # SomfyProtect2MQTT version
-ARG VERSION=2025.1.0
+ARG VERSION=2025.1.3
 
 # Install required packages
 RUN apk update --no-cache

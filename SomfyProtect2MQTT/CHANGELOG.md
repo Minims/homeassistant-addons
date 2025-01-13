@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.1.3
+
+fix: update dependencies
+
 ## 2025.1.2
 
 fix: json2yaml error
