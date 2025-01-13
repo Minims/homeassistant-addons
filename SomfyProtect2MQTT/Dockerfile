@@ -9,7 +9,7 @@ ARG VERSION=2025.1.3
 # Install required packages
 RUN apk update --no-cache
 RUN apk upgrade --no-cache
-RUN apk add --no-cache py3-pip py3-opencv ffmpeg libjxl-tools libjxl yq
+RUN apk add --no-cache py3-pip py3-opencv ffmpeg libjxl-tools libjxl yq openssl openssl-dev libsrtp libsrtp-dev libvpx libvpx-dev opus opus-dev ffmpeg-dev python3-dev build-base
 # RUN pip3 install --no-cache-dir python-json2yaml==0.1.1
 
 # Download source and untar
