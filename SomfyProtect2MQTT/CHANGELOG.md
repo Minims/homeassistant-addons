@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.1.4
+
+fix: install missing libraries
+
 ## 2025.1.3
 
 fix: update dependencies

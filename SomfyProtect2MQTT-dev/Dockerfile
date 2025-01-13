@@ -6,8 +6,7 @@ ENV LANG C.UTF-8
 # Install required packages
 RUN apk update --no-cache
 RUN apk upgrade --no-cache
-RUN apk add --no-cache py3-pip py3-opencv ffmpeg libjxl-tools libjxl yq
-
+RUN apk add --no-cache py3-pip py3-opencv ffmpeg libjxl-tools libjxl yq openssl openssl-dev libsrtp libsrtp-dev libvpx libvpx-dev opus opus-dev ffmpeg-dev python3-dev build-base
 # Download source and untar
 WORKDIR /usr/bin
 ADD "https://github.com/Minims/SomfyProtect2MQTT/archive/refs/heads/dev.tar.gz" dev.tar.gz
