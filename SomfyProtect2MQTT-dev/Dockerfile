@@ -4,6 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 # Install required packages
+RUN apk update --no-cache
 RUN apk add --no-cache py3-pip py3-opencv ffmpeg libjxl-tools libjxl yq
 
 # Download source and untar
