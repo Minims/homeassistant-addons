@@ -1,5 +1,19 @@
 # Changelog
 
+## 2025.1.5
+
+roolback: use somfyProtect2MQTT 2024.9.0
+2025.1.0: moved to somfyProtect2MQTT-dev
+
+## 2025.1.0
+
+feature: Add videophone like v500 (ringing, snapshot, open gate, etc.)
+feature: Add History
+feature: Add Video Events
+visiophone: write clip to /media folder
+visiophone: save snapshot/video to media folder for visiophone
+fix: try to use asyncio on websocket
+
 ## 2024.9.0
 
 - fix: resubscribe to all topic on MQTT reconnect
