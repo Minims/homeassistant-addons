@@ -1,14 +1,12 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: MyFox2MQTT-dev
-version: dev
-slug: myfox-2-mqtt-dev
-description: "Publish MyFox Alarm as MQTT messages (dev branch)"
-url: https://github.com/Minims/homeassistant-addons/tree/main/MyFox2MQTT-dev
-startup: application
+name: SomfyProtect2MQTT - 2nd Somfy Account
+version: 2025.1.5
+slug: somfy-protect-2-mqtt-2nd-somfy-account
+description: Publish Somfy Home Alarm as MQTT messages
+url: https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT
 services:
   - mqtt:need
-boot: auto
 arch:
   - armhf
   - armv7
@@ -18,13 +16,11 @@ arch:
 init: false
 map:
   - share:rw
-  - config:rw
+  - homeassistant_config:rw
 options:
-  myfox:
+  somfy_protect:
     username: mail@example.org
     password: iliketurtles
-    client_id: clientid
-    client_secret: clientsecret
     sites:
       - Maison
   homeassistant_config:
@@ -37,19 +33,18 @@ options:
     ssl: false
     username: homeassistant
     password: homeassistant
-    client-id: myfox-dev
-    topic_prefix: MyFox2mqtt
+    client-id: somfy-protect-2nd
+    topic_prefix: somfyProtect2mqtt
     ha_discover_prefix: homeassistant
   delay_site: "10"
   delay_device: "60"
   manual_snapshot: false
+  streaming: mqtt
   debug: false
 schema:
-  myfox:
+  somfy_protect:
     username: str
     password: str
-    client_id: str
-    client_secret: str
     sites:
       - str
   homeassistant_config:
@@ -68,4 +63,5 @@ schema:
   delay_site: int?
   delay_device: int?
   manual_snapshot: bool
+  streaming: str?
   debug: bool

@@ -1,5 +1,5 @@
-# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 ---
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: SomfyProtect2MQTT-dev
 version: dev
 slug: somfy-protect-2-mqtt-dev
@@ -18,7 +18,7 @@ arch:
 init: false
 map:
   - share:rw
-  - config:rw
+  - homeassistant_config:rw
 options:
   somfy_protect:
     username: mail@example.org
@@ -36,7 +36,7 @@ options:
     username: homeassistant
     password: homeassistant
     client-id: somfy-protect
-    topic_prefix: somfyProtect2mqtt
+    topic_prefix: somfyProtect2mqtt-dev
     ha_discover_prefix: homeassistant
   delay_site: "10"
   delay_device: "60"
