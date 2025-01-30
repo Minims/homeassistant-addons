@@ -7,7 +7,7 @@ ENV LANG C.UTF-8
 COPY rootfs /
 
 # Setup base
-RUN apk add --no-cache \
+RUN apk update && apk add --no-cache \
     build-base \
     ffmpeg \
     ffmpeg-dev \
@@ -18,8 +18,6 @@ RUN apk add --no-cache \
     libvpx \
     libvpx-dev \
     linux-headers \
-    openssl \
-    openssl-dev \
     opus \
     opus-dev \
     py3-opencv \
@@ -27,9 +25,6 @@ RUN apk add --no-cache \
     python3 \
     python3-dev \
     yq
-
-# Install python3 requirements
-# RUN pip3 install --no-cache-dir python-json2yaml==0.1.1
 
 # Download source and untar
 WORKDIR /usr/bin

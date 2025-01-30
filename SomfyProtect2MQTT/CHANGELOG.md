@@ -1,5 +1,10 @@
 # Changelog
 
+## 2025.2.0
+
+fix: restore 2025.1.0 version with fix for x86_64
+feature: Add smoke binary sensor
+
 ## 2025.1.5
 
 roolback: use somfyProtect2MQTT 2024.9.0
