@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.2.1a
+
+fix: installation / upgrade issue
+
 ## 2025.2.0
 
 fix: restore 2025.1.0 version with fix for x86_64
