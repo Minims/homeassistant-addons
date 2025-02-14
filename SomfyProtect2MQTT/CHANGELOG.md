@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.2.1c
+
+fix: musl alpine dependency
+
 ## 2025.2.1b
 
 fix: test armv7 libjxl
