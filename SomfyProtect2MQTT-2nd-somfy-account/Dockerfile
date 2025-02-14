@@ -11,7 +11,6 @@ COPY rootfs /
 
 # Setup base
 RUN apk update && apk add --no-cache \
-    build-base \
     ffmpeg \
     ffmpeg-dev \
     libjxl \
