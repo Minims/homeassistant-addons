@@ -1,5 +1,10 @@
 # Changelog
 
+## 2025.2.2
+
+fix: config directory for go2rtc & echo
+improve: history. First Run will published old messages.
+
 ## 2025.2.1c
 
 fix: musl alpine dependency
