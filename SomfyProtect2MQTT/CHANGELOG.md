@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.2.3
+
+feature: allow video_backend change
+
 ## 2025.2.2
 
 fix: config directory for go2rtc & echo
