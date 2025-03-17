@@ -1,8 +1,9 @@
 # Changelog
 
-## 2025.2.3
+## 2025.3.0
 
 feature: allow video_backend change
+fix: Somfy API breaking change since LINK Update to 2.13.0
 
 ## 2025.2.2
 
