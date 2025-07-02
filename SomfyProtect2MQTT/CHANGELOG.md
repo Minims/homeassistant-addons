@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.7.0
+
+fix: VisioPhone, write video to media folder.
+
 ## 2025.3.0
 
 feature: allow video_backend change
