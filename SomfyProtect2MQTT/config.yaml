@@ -15,9 +15,16 @@ arch:
   - i386
 init: false
 map:
-  - "share:rw"
-  - "media:rw"
-  - "config:rw"
+map:
+  - path: "/addon_config"
+    type: "addon_config"
+    read_only: false
+  - path: "/config"
+    type: "homeassistant_config"
+    read_only: false
+  - path: "/media"
+    type: media
+    read_only: false
 options:
   somfy_protect:
     username: mail@example.org
