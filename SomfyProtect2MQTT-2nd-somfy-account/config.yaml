@@ -15,9 +15,9 @@ arch:
   - i386
 init: false
 map:
-  - share:rw
-  - config:rw
-  - media:rw
+  - "share:rw"
+  - "media:rw"
+  - "config:rw"
 options:
   somfy_protect:
     username: mail@example.org
