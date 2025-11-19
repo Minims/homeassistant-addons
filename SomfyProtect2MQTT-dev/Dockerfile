@@ -19,7 +19,6 @@ RUN apk update && apk add --no-cache \
     linux-headers \
     opus \
     opus-dev \
-    py3-opencv \
     py3-pip \
     python3 \
     python3-dev \
@@ -33,7 +32,8 @@ RUN tar -xvf dev.tar.gz && mv /usr/bin/SomfyProtect2MQTT-dev /usr/bin/SomfyProte
 # Install python3 requirements
 WORKDIR /usr/bin/SomfyProtect2MQTT/somfyProtect2Mqtt
 
-# Upgrade pip and setuptools, filter out opencv-python from requirements, then install
+# Upgrade pip and setuptools, install opencv-python-headless first, then other requirements
 RUN pip3 install --no-cache-dir --break-system-packages --upgrade "pip>=24.0" "setuptools>=70.0" wheel && \
+    pip3 install --no-cache-dir --break-system-packages opencv-python-headless && \
     grep -v "opencv-python" requirements/addon.txt > requirements_filtered.txt && \
     pip3 install --no-cache-dir --break-system-packages --prefer-binary -r requirements_filtered.txt
