@@ -27,8 +27,11 @@ RUN apk update && apk add --no-cache \
 # Download source and untar
 WORKDIR /usr/bin
 ADD "https://github.com/Minims/SomfyProtect2MQTT/archive/refs/heads/dev.tar.gz" dev.tar.gz
-RUN tar -xvf dev.tar.gz && mv /usr/bin/SomfyProtect2MQTT-dev /usr/bin/SomfyProtect2MQTT
+RUN tar -xvf dev.tar.gz && mv /usr/bin/SomfyProtect2MQTT-dev /usr/bin/SomfyProtect2MQTT && rm dev.tar.gz
 
 # Install python3 requirements
 WORKDIR /usr/bin/SomfyProtect2MQTT/somfyProtect2Mqtt
-RUN pip3 install --no-cache-dir -r requirements/addon.txt
+
+# Upgrade pip and setuptools, then install packages using only binary wheels
+RUN pip3 install --no-cache-dir --break-system-packages --upgrade "pip>=24.0" "setuptools>=70.0" wheel && \
+    pip3 install --no-cache-dir --break-system-packages --prefer-binary --only-binary=opencv-python-headless -r requirements/addon.txt
