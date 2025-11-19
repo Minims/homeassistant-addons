@@ -1,5 +1,5 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:18.0.3
+ARG BUILD_FROM
 FROM ${BUILD_FROM}
 ENV LANG=C.UTF-8
 
