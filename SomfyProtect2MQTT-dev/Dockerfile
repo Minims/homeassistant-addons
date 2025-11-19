@@ -19,7 +19,6 @@ RUN apk update && apk add --no-cache \
     linux-headers \
     opus \
     opus-dev \
-    py3-opencv \
     py3-pip \
     python3 \
     python3-dev \
