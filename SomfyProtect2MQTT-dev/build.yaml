@@ -1,15 +1,15 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 build_from:
-  aarch64: ghcr.io/hassio-addons/base:16.3.6
-  amd64: ghcr.io/hassio-addons/base:16.3.6
-  armhf: ghcr.io/hassio-addons/base:16.3.6
-  armv7: ghcr.io/hassio-addons/base:16.3.6
-  i386: ghcr.io/hassio-addons/base:16.3.6
+  aarch64: ghcr.io/hassio-addons/base:18.0.3
+  amd64: ghcr.io/hassio-addons/base:18.0.3
+  armhf: ghcr.io/hassio-addons/base:18.0.3
+  armv7: ghcr.io/hassio-addons/base:18.0.3
+  i386: ghcr.io/hassio-addons/base:18.0.3
 labels:
   org.opencontainers.image.title: "Home Assistant Add-on: Minims add-on"
   org.opencontainers.image.description: "Minims add-on to use as a blueprint for new add-ons."
   org.opencontainers.image.source: "https://github.com/Minims/homeassistant-addons"
   org.opencontainers.image.licenses: "Apache License 2.0"
 args:
-  VERSION: "2025.3.0"
+  VERSION: "2025.7.0"

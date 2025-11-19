@@ -1,7 +1,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:18.0.3
 FROM ${BUILD_FROM}
-ENV LANG C.UTF-8
+ENV LANG=C.UTF-8
 
 # Copy root filesystem
 COPY rootfs /

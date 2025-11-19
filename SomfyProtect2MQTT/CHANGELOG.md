@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.12.0
+
+feat: DoorLock, add more sensors.
+
 ## 2025.7.0
 
 fix: VisioPhone, write video to media folder.
