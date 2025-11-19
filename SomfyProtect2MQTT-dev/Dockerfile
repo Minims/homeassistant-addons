@@ -1,32 +1,27 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 ARG BUILD_FROM
 FROM ${BUILD_FROM}
+
 ENV LANG=C.UTF-8
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 # Copy root filesystem
 COPY rootfs /
 
-# Setup base - Add dependencies for OpenCV
-RUN apk update && apk add --no-cache \
+# Setup base - Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg \
-    ffmpeg-dev \
-    glib \
-    libgcc \
-    libstdc++ \
-    libjxl \
+    libgl1 \
+    libglib2.0-0 \
+    libjxl-dev \
     libjxl-tools \
-    libsrtp \
-    libsrtp-dev \
-    libvpx \
+    libopus-dev \
+    libsrtp2-dev \
     libvpx-dev \
-    linux-headers \
-    opus \
-    opus-dev \
-    py3-numpy \
-    py3-pip \
-    python3 \
-    python3-dev \
-    yq
+    wget \
+    yq \
+    && rm -rf /var/lib/apt/lists/*
 
 # Download source and untar
 WORKDIR /usr/bin
@@ -35,9 +30,5 @@ RUN tar -xvf dev.tar.gz && mv /usr/bin/SomfyProtect2MQTT-dev /usr/bin/SomfyProte
 
 # Install python3 requirements
 WORKDIR /usr/bin/SomfyProtect2MQTT/somfyProtect2Mqtt
-
-# Upgrade pip and setuptools, install opencv-python-headless with only binary wheels
-RUN pip3 install --no-cache-dir --break-system-packages --upgrade "pip>=24.0" "setuptools>=70.0" wheel && \
-    pip3 install --no-cache-dir --break-system-packages --only-binary=:all: opencv-python-headless==4.10.0.84 && \
-    grep -v "opencv-python" requirements/addon.txt > requirements_filtered.txt && \
-    pip3 install --no-cache-dir --break-system-packages --prefer-binary -r requirements_filtered.txt
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -r requirements/addon.txt
