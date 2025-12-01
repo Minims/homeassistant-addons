@@ -37,11 +37,6 @@ options:
     code_arm_required: false
     code_disarm_required: false
   mqtt:
-    host: 192.168.x.x
-    port: 1883
-    ssl: false
-    username: homeassistant
-    password: homeassistant
     client-id: somfy-protect
     topic_prefix: somfyProtect2mqtt-dev
     ha_discover_prefix: homeassistant
@@ -61,9 +56,9 @@ schema:
     code_arm_required: bool
     code_disarm_required: bool
   mqtt:
-    host: str
-    port: int
-    ssl: bool
+    host: str?
+    port: int?
+    ssl: bool?
     username: str?
     password: str?
     client-id: str?
