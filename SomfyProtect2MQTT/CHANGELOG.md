@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.12.1
+
+feat: Use MQTT HA Addon by default if mqtt config is missing
+
 ## 2025.12.0
 
 feat: DoorLock, add more sensors.
