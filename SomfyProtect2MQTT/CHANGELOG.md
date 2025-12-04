@@ -3,6 +3,7 @@
 ## 2025.12.1
 
 feat: Use MQTT HA Addon by default if mqtt config is missing
+feat: Use async to upadte quickly devices on actions
 
 ## 2025.12.0
 
