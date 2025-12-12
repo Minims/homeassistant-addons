@@ -2,59 +2,59 @@
 
 ## 2025.12.1
 
-chore: Use MQTT HA Addon by default if mqtt config is missing
-chore: Use async to update quickly Site & Devices on actions
-feat: DoorLock, Update device on lock/unlock trigger
-fix: IndoorCamera night_vision
+- chore: Use MQTT HA Addon by default if mqtt config is missing
+- chore: Use async to update quickly Site & Devices on actions
+- feat: DoorLock, Update device on lock/unlock trigger
+- fix: IndoorCamera night_vision
 
 ## 2025.12.0
 
-feat: DoorLock, add more sensors.
+- feat: DoorLock, add more sensors.
 
 ## 2025.7.0
 
-fix: VisioPhone, write video to media folder.
+- fix: VisioPhone, write video to media folder.
 
 ## 2025.3.0
 
-feature: allow video_backend change
-fix: Somfy API breaking change since LINK Update to 2.13.0
+- feature: allow video_backend change
+- fix: Somfy API breaking change since LINK Update to 2.13.0
 
 ## 2025.2.2
 
-fix: config directory for go2rtc & echo
-improve: history. First Run will published old messages.
+- fix: config directory for go2rtc & echo
+- improve: history. First Run will published old messages.
 
 ## 2025.2.1c
 
-fix: musl alpine dependency
+- fix: musl alpine dependency
 
 ## 2025.2.1b
 
-fix: test armv7 libjxl
+- fix: test armv7 libjxl
 
 ## 2025.2.1a
 
-fix: installation / upgrade issue
+- fix: installation / upgrade issue
 
 ## 2025.2.0
 
-fix: restore 2025.1.0 version with fix for x86_64
-feature: Add smoke binary sensor
+- fix: restore 2025.1.0 version with fix for x86_64
+- feature: Add smoke binary sensor
 
 ## 2025.1.5
 
-roolback: use somfyProtect2MQTT 2024.9.0
-2025.1.0: moved to somfyProtect2MQTT-dev
+- roolback: use somfyProtect2MQTT 2024.9.0
+- 2025.1.0: moved to somfyProtect2MQTT-dev
 
 ## 2025.1.0
 
-feature: Add videophone like v500 (ringing, snapshot, open gate, etc.)
-feature: Add History
-feature: Add Video Events
-visiophone: write clip to /media folder
-visiophone: save snapshot/video to media folder for visiophone
-fix: try to use asyncio on websocket
+- feature: Add videophone like v500 (ringing, snapshot, open gate, etc.)
+- feature: Add History
+- feature: Add Video Events
+- visiophone: write clip to /media folder
+- visiophone: save snapshot/video to media folder for visiophone
+- fix: try to use asyncio on websocket
 
 ## 2024.9.0
 
