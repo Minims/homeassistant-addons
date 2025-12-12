@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: SomfyProtect2MQTT-dev
-version: 2025.12.1
+version: 2025.12.2a
 slug: somfy-protect-2-mqtt-dev
 description: "Publish Somfy Home Alarm as MQTT messages (dev branch)"
 url: https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT-dev
@@ -9,6 +9,8 @@ startup: application
 services:
   - mqtt:need
 boot: auto
+homeassistant_api: true
+hassio_api: true
 arch:
   - armhf
   - armv7
@@ -16,6 +18,10 @@ arch:
   - amd64
   - i386
 init: false
+ports:
+  8090/tcp: 8090
+ports_description:
+  8090/tcp: WebRTC Stream Port
 map:
   - path: "/addon_config"
     type: "addon_config"

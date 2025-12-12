@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.12.2
+
+- feat: get webrtc stream
+
 ## 2025.12.1
 
 - chore: Use MQTT HA Addon by default if mqtt config is missing
