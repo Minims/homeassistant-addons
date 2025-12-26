@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: SomfyProtect2MQTT - 2nd Somfy Account
-version: 2025.12.1
+version: 2025.12.3
 slug: somfy-protect-2-mqtt-2nd-somfy-account
 description: Publish Somfy Home Alarm as MQTT messages
 url: https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT

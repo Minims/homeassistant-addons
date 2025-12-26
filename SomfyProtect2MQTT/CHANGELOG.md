@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.12.3
+
+- fix: Fix authentification issue
+
 ## 2025.12.2
 
 - feat: get webrtc stream
