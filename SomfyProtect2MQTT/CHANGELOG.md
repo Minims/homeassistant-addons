@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025.12.4
+
+- fix: webrtc steam errors
+
 ## 2025.12.3
 
 - fix: Fix authentification issue
