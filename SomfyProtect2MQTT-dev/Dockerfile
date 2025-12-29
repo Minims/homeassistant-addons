@@ -10,13 +10,16 @@ COPY rootfs /
 RUN apk update && apk add --no-cache \
     ffmpeg \
     ffmpeg-dev \
+    gcc \
     libjxl \
     libjxl-tools \
+    libffi-dev \
     libsrtp \
     libsrtp-dev \
     libvpx \
     libvpx-dev \
     linux-headers \
+    musl-dev \
     opus \
     opus-dev \
     py3-opencv \
