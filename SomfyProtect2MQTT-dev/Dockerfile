@@ -7,7 +7,7 @@ ENV LANG=C.UTF-8
 COPY rootfs /
 
 # Setup base
-RUN apk update && apk add --no-cache \
+RUN apk update && apk upgrade --no-cache && apk add --no-cache \
     ffmpeg \
     ffmpeg-dev \
     gcc \
