@@ -7,21 +7,20 @@ ENV LANG=C.UTF-8
 COPY rootfs /
 
 # Setup base
-RUN apk update && apk upgrade --no-cache && apk add --no-cache \
+RUN apk update && apk add --no-cache \
     ffmpeg \
     ffmpeg-dev \
-    gcc \
     libjxl \
     libjxl-tools \
-    libffi-dev \
     libsrtp \
     libsrtp-dev \
     libvpx \
     libvpx-dev \
     linux-headers \
-    musl-dev \
     opus \
     opus-dev \
+    py3-cffi \
+    py3-cryptography \
     py3-opencv \
     py3-pip \
     python3 \
