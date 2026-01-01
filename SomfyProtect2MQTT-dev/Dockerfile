@@ -6,12 +6,14 @@ ENV LANG=C.UTF-8
 # Copy root filesystem
 COPY rootfs /
 
+# Do not compile packages from source
+ENV PIP_NO_BUILD_ISOLATION=1
+ENV PIP_PREFER_BINARY=1
+
 # Setup base
-RUN apk add --no-cache \
-    build-base \
+RUN apk update && apk add --no-cache \
     ffmpeg \
     ffmpeg-dev \
-    libffi-dev \
     libjxl \
     libjxl-tools \
     libsrtp \
@@ -21,7 +23,6 @@ RUN apk add --no-cache \
     linux-headers \
     opus \
     opus-dev \
-    pkgconfig \
     py3-cffi \
     py3-cryptography \
     py3-opencv \
