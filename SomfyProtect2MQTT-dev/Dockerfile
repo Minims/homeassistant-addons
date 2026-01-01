@@ -8,8 +8,10 @@ COPY rootfs /
 
 # Setup base
 RUN apk update && apk add --no-cache \
+    build-base \
     ffmpeg \
     ffmpeg-dev \
+    libffi-dev \
     libjxl \
     libjxl-tools \
     libsrtp \
@@ -19,6 +21,7 @@ RUN apk update && apk add --no-cache \
     linux-headers \
     opus \
     opus-dev \
+    pkgconfig \
     py3-cffi \
     py3-cryptography \
     py3-opencv \
