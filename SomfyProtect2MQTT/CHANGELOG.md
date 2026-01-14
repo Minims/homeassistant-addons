@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026.1.0
+
+- fix: No Filedescriptor available
+- breaking change: webrtc stream change from mjpeg to hls with audio
+- feat: hls stream if camera is webrtc 'http://0.0.0.0:8090/<device_id>/playlist.m3u8'
+
 ## 2025.12.4
 
 - fix: webrtc steam errors
