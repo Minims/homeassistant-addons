@@ -2,298 +2,286 @@
 
 ## 2026.1.0
 
-- fix: No Filedescriptor available
-- breaking change: webrtc stream change from mjpeg to hls with audio
-- feat: hls stream if camera is webrtc 'http://0.0.0.0:8090/<device_id>/playlist.m3u8'
+- Fixed: No file descriptor available
+- Breaking: WebRTC stream changed from MJPEG to HLS with audio
+- Added: HLS stream for WebRTC cameras (`http://0.0.0.0:8090/<device_id>/playlist.m3u8`)
 
 ## 2025.12.4
 
-- fix: webrtc steam errors
+- Fixed: WebRTC stream errors
 
 ## 2025.12.3
 
-- fix: Fix authentification issue
+- Fixed: Authentication issue
 
 ## 2025.12.2
 
-- feat: get webrtc stream
+- Added: WebRTC stream support
 
 ## 2025.12.1
 
-- chore: Use MQTT HA Addon by default if mqtt config is missing
-- chore: Use async to update quickly Site & Devices on actions
-- feat: DoorLock, Update device on lock/unlock trigger
-- fix: IndoorCamera night_vision
+- Changed: Use MQTT Home Assistant Addon by default if MQTT config is missing
+- Improved: Async updates for Site & Devices actions
+- Added: DoorLock, update device on lock/unlock trigger
+- Fixed: IndoorCamera night vision
 
 ## 2025.12.0
 
-- feat: DoorLock, add more sensors.
+- Added: DoorLock, more sensors
 
 ## 2025.7.0
 
-- fix: VisioPhone, write video to media folder.
+- Fixed: VisioPhone, write video to media folder
 
 ## 2025.3.0
 
-- feature: allow video_backend change
-- fix: Somfy API breaking change since LINK Update to 2.13.0
+- Added: Video backend change option
+- Fixed: Somfy API breaking change (LINK Update 2.13.0)
 
 ## 2025.2.2
 
-- fix: config directory for go2rtc & echo
-- improve: history. First Run will published old messages.
+- Fixed: Config directory for go2rtc & echo
+- Improved: History, first run publishes old messages
 
 ## 2025.2.1c
 
-- fix: musl alpine dependency
+- Fixed: musl alpine dependency
 
 ## 2025.2.1b
 
-- fix: test armv7 libjxl
+- Fixed: Test armv7 libjxl
 
 ## 2025.2.1a
 
-- fix: installation / upgrade issue
+- Fixed: Installation/upgrade issue
 
 ## 2025.2.0
 
-- fix: restore 2025.1.0 version with fix for x86_64
-- feature: Add smoke binary sensor
+- Fixed: Restore 2025.1.0 version with x86_64 fix
+- Added: Smoke binary sensor
 
 ## 2025.1.5
 
-- roolback: use somfyProtect2MQTT 2024.9.0
-- 2025.1.0: moved to somfyProtect2MQTT-dev
+- Rolled back: Use SomfyProtect2MQTT 2024.9.0
+- Changed: Moved to SomfyProtect2MQTT-dev
 
 ## 2025.1.0
 
-- feature: Add videophone like v500 (ringing, snapshot, open gate, etc.)
-- feature: Add History
-- feature: Add Video Events
-- visiophone: write clip to /media folder
-- visiophone: save snapshot/video to media folder for visiophone
-- fix: try to use asyncio on websocket
+- Added: Videophone (ringing, snapshot, open gate, etc.)
+- Added: History
+- Added: Video events
+- Improved: VisioPhone, write clips and snapshots to media folder
+- Fixed: Use asyncio for websocket
 
 ## 2024.9.0
 
-- fix: resubscribe to all topic on MQTT reconnect
+- Fixed: Resubscribe to all topics on MQTT reconnect
 
 ## 2024.3.0
 
-- fix: remove human_detect_enabled
-- chore: set version to 2024.3.0
-- feature: Add device_class motion for PIR and safety for IntelliTag
+- Fixed: Remove human_detect_enabled
+- Changed: Set version to 2024.3.0
+- Added: Device class motion for PIR, safety for IntelliTag
 
 ## 2024.1.0
 
-- fix: default value for update_available
+- Fixed: Default value for update_available
 
 ## 2023.12.2
 
-- fix: Immediate Alarm Status on update
+- Fixed: Immediate alarm status on update
 
 ## 2023.12.1
 
-- fix: reduce WebSocket time before restart
+- Fixed: Reduce WebSocket restart time
 
 ## 2023.12.0
 
-- fix: Improve WebSocket
-- chore: Update requirements
+- Improved: WebSocket
+- Updated: Requirements
 
 ## 2023.11.0
 
-- fix: do not ask for snapshot if shutter is closed
+- Fixed: Do not request snapshot if shutter is closed
 
 ## 2023.10.0
 
-- feature: Allow camera streaming via MQTT Camera OR WebRTC Camera (go2rtc)
+- Added: Camera streaming via MQTT Camera or WebRTC Camera (go2rtc)
 
 ## 2023.9.4
 
-- fix: CPU Load
+- Fixed: CPU load
 
 ## 2023.9.3
 
-- fix: MQTT True/False Command
-- fix: restart process on failure
+- Fixed: MQTT True/False command
+- Fixed: Restart process on failure
 
 ## 2023.9.2
 
-- fix: supported_fetaures to 14
-  https://github.com/Minims/SomfyProtect2MQTT/issues/55
-
-  It won't be automatically fixed.
-  You have to remove the alarm device first.
-  Then restart the Addon.
-  Update your lovelave entity & automatation.
-
-  If i make the update on my side,
-  the alarm device can change his name (installation before 2023.8.0)
-  and it will break your automation & dashboard.
+- Fixed: supported_features to 14 ([#55](https://github.com/Minims/SomfyProtect2MQTT/issues/55))
+  - Manual intervention required: Remove alarm device, restart addon, update Lovelace entity & automation
 
 ## 2023.9.1
 
-- Fix: Test Siren buttons
-- Feat: Add Beta Video Streaming
-  https://github.com/Minims/SomfyProtect2MQTT#video-streaming
+- Fixed: Siren buttons
+- Added: Beta video streaming ([Video Streaming](https://github.com/Minims/SomfyProtect2MQTT#video-streaming))
 
 ## 2023.8.3
 
-- Add Watermark on snapshot
+- Added: Watermark on snapshot
 
 ## 2023.8.2
 
-- Test Siren buttons
-- Update MQTT to feat HA 2023.8.0
-- Improve WebSocket
+- Added: Siren buttons
+- Updated: MQTT for HA 2023.8.0
+- Improved: WebSocket
 
 ## 2023.8.1
 
-- Fix Load Issue
-- Retain all MQTT Messages
+- Fixed: Load issue
+- Changed: Retain all MQTT messages
 
 ## 2023.8.0
 
-- Improve WebSocket messages
+- Improved: WebSocket messages
 
 ## 2023.7.0
 
-- Update requirements
-- Fix installation failure because of PyYaml
+- Updated: Requirements
+- Fixed: Installation failure (PyYaml)
 
 ## 2023.6.1
 
-- Clean old binary_sensor device_lost
+- Cleaned: Old binary_sensor device_lost
 
 ## 2023.6.0
 
-- Change Versioning to 2023.6.0
-- Add some detailled log to debug
-- Update Requirements
-- Add scenarios in logs for some future features
-- Improve WebSocket
-- Breaking Change: update device_lost binary_sensor to device_tracker
-- Fix Typo in device_lost / presence
+- Changed: Versioning to 2023.6.0
+- Added: Detailed logs for debugging
+- Updated: Requirements
+- Added: Scenarios in logs for future features
+- Improved: WebSocket
+- Breaking: device_lost binary_sensor updated to device_tracker
+- Fixed: Typo in device_lost/presence
 
 ## 0.2.9
 
-- Fix ambient_light_threshold & smart_alarm_duration
+- Fixed: ambient_light_threshold & smart_alarm_duration
 
 ## 0.2.8
 
-- Fix smart_alarm_duration & lighting_trigger
+- Fixed: smart_alarm_duration & lighting_trigger
 
 ## 0.2.7
 
-- Wait 2 sec to upadte device after action.
-- Add GET scenarios-core & scenario (for later usage)
-- Update README
-- Add Reboot / Halt button for Camera and Link
-- Fix smart_alarm_duration
+- Changed: Wait 2 sec to update device after action
+- Added: GET scenarios-core & scenario (future use)
+- Updated: README
+- Added: Reboot/Halt button for Camera and Link
+- Fixed: smart_alarm_duration
 
 ## 0.2.6
 
-- Update device after action
-- Update shutter_state switch
-- Fix lighting_state switch
-- Update lighting_state
-- Add new sensors/switchs
-- Add generic update device
-- Add User api calls
-- Add User Model
-- Update Action List
-- Update version to 0.2.6
-- Remove signal_strength device_class on % signal
+- Updated: Device after action
+- Updated: shutter_state switch
+- Fixed: lighting_state switch
+- Updated: lighting_state
+- Added: New sensors/switches
+- Added: Generic update device
+- Added: User API calls and model
+- Updated: Action list
+- Changed: Version to 0.2.6
+- Removed: signal_strength device_class on % signal
 
 ## 0.2.5
 
-- Add Debug log on Site and Devices
-- Add interndoor type
+- Added: Debug log on Site and Devices
+- Added: interndoor type
 
 ## 0.2.4
 
-- Fix security.level.change
+- Fixed: security.level.change
 
 ## 0.2.3
 
-- Fix battery_low
+- Fixed: battery_low
 
 ## 0.2.2
 
-- Fix recalibration_required
+- Fixed: recalibration_required
 
 ## 0.2.1
 
-- Add IntellTag Motion Sensor (Alpha)
-- Fix Update Device/Site
+- Added: IntelliTag motion sensor (alpha)
+- Fixed: Update device/site
 
 ## 0.2.0
 
-- Fix intellitag door type
-- Fix camera video type
-- Add Somfy One/One+
-- Improve Logging
+- Fixed: IntelliTag door type
+- Fixed: Camera video type
+- Added: Somfy One/One+
+- Improved: Logging
 
 ## 0.1.9.8
 
-- Update Add-on to new S6: https://developers.home-assistant.io/blog/2022/05/12/s6-overlay-base-images/
+- Updated: Add-on to new S6 ([S6 Overlay Base Images](https://developers.home-assistant.io/blog/2022/05/12/s6-overlay-base-images/))
 
 ## 0.1.9
 
-- Add some new entities
-- Fix Websocket Refresh Token
-- Add motion sensor when alarm is triggered
+- Added: New entities
+- Fixed: WebSocket refresh token
+- Added: Motion sensor when alarm is triggered
 
 ## 0.1.8
 
-- Add MQTT ssl
-- Bump SomfyProtect2MQTT
+- Added: MQTT SSL
+- Updated: SomfyProtect2MQTT
 
 ## 0.1.7
 
-- Fix request_token
+- Fixed: request_token
 
 ## 0.1.6
 
-- Add Manual Snapshot mode
-- Add Old MyFox Security Camera
-- Add Smoke Detector
-- Add Extender
-- Change default code value to 0
+- Added: Manual snapshot mode
+- Added: Old MyFox security camera
+- Added: Smoke detector
+- Added: Extender
+- Changed: Default code value to 0
 
 ## 0.1.5
 
-- Fix homeassistant_config schema
+- Fixed: homeassistant_config schema
 
 ## 0.1.4
 
-- Use SomfyProtect2MQTT 0.1.3
-- Fix OutDoor Camera Snapshot
-- Add possibilty to setup a code on alarm panel
-- Allow to disable code on arm and/or disarm
+- Updated: SomfyProtect2MQTT 0.1.3
+- Fixed: Outdoor camera snapshot
+- Added: Setup code on alarm panel
+- Allowed: Disable code on arm/disarm
 
 ## 0.1.3
 
-- Use SomfyProtect2MQTT 0.1.2
-- Fix Stop Alarm
-- Fix Trigger Alarm
+- Updated: SomfyProtect2MQTT 0.1.2
+- Fixed: Stop alarm
+- Fixed: Trigger alarm
 - Do not publish unwanted devices
 
 ## 0.1.2
 
-- Add build.json file (thanks to @Minims)
+- Added: build.json file (thanks @Minims)
 
 ## 0.1.1
 
-- Changed tar link
+- Changed: tar link
 
 ## 0.1.0
 
-- Addon renamed "SomfyProtect2MQTT-dev"
-- Lot of code rewritten (thanks to @Minims)
+- Renamed: Addon to "SomfyProtect2MQTT-dev"
+- Rewritten: Major code changes (thanks @Minims)
 - Based on dev branch
-- Added logo, icon, changelog, docs...
+- Added: Logo, icon, changelog, docs
 
 ## 0.0.1 to 0.0.4
 
