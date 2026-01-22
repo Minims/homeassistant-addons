@@ -1,12 +1,15 @@
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/minims)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/minims)
+
 # Minims Home Assistant add-on repository
 
 [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FMinims%2Fhomeassistant-addons)
 
 ## Issues
 
-Only on SomfyProtect2MQTT => https://github.com/Minims/SomfyProtect2MQTT/issues
+- SomfyProtect2MQTT => https://github.com/Minims/SomfyProtect2MQTT/issues
+- MyFox2MQTT => https://github.com/Minims/MyFox2MQTT/issues
 
 ## Manual Installation
 
@@ -22,9 +25,6 @@ Publish Somfy Home Alarm as MQTT messages.
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
 
 ### <img src="SomfyProtect2MQTT-dev/icon.png" width="40px"> [SomfyProtect2MQTT-dev add-on](./SomfyProtect2MQTT-dev)
 
@@ -32,9 +32,27 @@ Publish Somfy Home Alarm as MQTT messages (dev version).
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports i386 Architecture][i386-shield]
+
+### <img src="SomfyProtect2MQTT-2nd-somfy-account/icon.png" width="40px"> [SomfyProtect2MQTT - 2nd Somfy Account add-on](./SomfyProtect2MQTT-2nd-somfy-account)
+
+Publish Somfy Home Alarm as MQTT messages (2nd Somfy Account).
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+
+### <img src="MyFox2MQTT/icon.png" width="40px"> [MyFox2MQTT add-on](./MyFox2MQTT)
+
+Publish MyFox Alarm as MQTT messages.
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+
+### <img src="MyFox2MQTT-dev/icon.png" width="40px"> [MyFox2MQTT-dev add-on](./MyFox2MQTT-dev)
+
+Publish MyFox Alarm as MQTT messages (dev version).
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
 
 <!--
 
@@ -56,8 +74,5 @@ Notes to developers after forking or using the github template feature:
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
-[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 
 Many Thanks to [schumijo](https://github.com/schumijo) for his work on this addon !

@@ -8,11 +8,8 @@ url: https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT
 services:
   - mqtt:need
 arch:
-  - armhf
-  - armv7
   - aarch64
   - amd64
-  - i386
 init: false
 map:
 map:

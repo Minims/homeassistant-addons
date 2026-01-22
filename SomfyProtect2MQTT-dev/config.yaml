@@ -15,11 +15,8 @@ host_network: true
 video: true
 audio: true
 arch:
-  - armhf
-  - armv7
   - aarch64
   - amd64
-  - i386
 init: false
 ports:
   8090/tcp: 8090
