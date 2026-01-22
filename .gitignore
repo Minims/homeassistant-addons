@@ -1,0 +1,15 @@
+# Git — fichiers exclus du versionnement
+
+# Secrets et variables d'environnement
+.env
+.env.*
+.env.local
+.env.*.local
+
+# Tokens et credentials
+token.json
+**/token.json
+
+# Logs
+*.log
+**/*.log

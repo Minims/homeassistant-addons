@@ -1,0 +1,15 @@
+# Cursor — exclus de l'indexation / Copilot / autres IA
+
+# Secrets et variables d'environnement
+.env
+.env.*
+.env.local
+.env.*.local
+
+# Tokens et credentials
+token.json
+**/token.json
+
+# Logs
+*.log
+**/*.log
