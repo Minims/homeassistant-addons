@@ -3,6 +3,7 @@
 ## 2026.1.0
 
 - Fixed: No file descriptor available
+- Fixed: Manually trigger alarm
 - Breaking: WebRTC stream changed from MJPEG to HLS with audio
 - Added: HLS stream for WebRTC cameras (`http://0.0.0.0:8090/<device_id>/playlist.m3u8`)
 
