@@ -1,17 +1,29 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: SomfyProtect2MQTT - 2nd Somfy Account
-version: 2025.12.3
+version: 2026.1.0
 slug: somfy-protect-2-mqtt-2nd-somfy-account
-description: Publish Somfy Home Alarm as MQTT messages
+description: "Publish Somfy Home Alarm as MQTT messages"
 url: https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT
+startup: application
 services:
   - mqtt:need
+boot: auto
+homeassistant_api: true
+hassio_api: true
+host_network: true
+video: true
+audio: true
 arch:
   - aarch64
   - amd64
 init: false
-map:
+ports:
+  8090/tcp: 8090
+  19302/udp: 19302
+ports_description:
+  8090/tcp: WebRTC Stream Port
+  19302/udp: WebRTC STUN
 map:
   - path: "/addon_config"
     type: "addon_config"
@@ -33,11 +45,6 @@ options:
     code_arm_required: false
     code_disarm_required: false
   mqtt:
-    host: 192.168.x.x
-    port: 1883
-    ssl: false
-    username: homeassistant
-    password: homeassistant
     client-id: somfy-protect-2nd
     topic_prefix: somfyProtect2mqtt
     ha_discover_prefix: homeassistant
@@ -57,9 +64,9 @@ schema:
     code_arm_required: bool
     code_disarm_required: bool
   mqtt:
-    host: str
-    port: int
-    ssl: bool
+    host: str?
+    port: int?
+    ssl: bool?
     username: str?
     password: str?
     client-id: str?

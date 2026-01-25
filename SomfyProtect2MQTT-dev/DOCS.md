@@ -37,7 +37,7 @@ mqtt:
   username: homeassistant
   password: homeassistant
   client-id: somfy-protect
-  topic_prefix: somfyProtect2mqtt
+  topic_prefix: somfyProtect2mqtt-dev
   ha_discover_prefix: homeassistant
 delay_site: "10"
 delay_device: "60"

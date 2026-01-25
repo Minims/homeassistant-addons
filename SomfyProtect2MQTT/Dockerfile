@@ -1,13 +1,17 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 ARG BUILD_FROM
 FROM ${BUILD_FROM}
-ENV LANG C.UTF-8
+ENV LANG=C.UTF-8
 
 # SomfyProtect2MQTT version
-ARG VERSION=2025.12.3
+ARG VERSION=2026.1.0
 
 # Copy root filesystem
 COPY rootfs /
+
+# Do not compile packages from source
+ENV PIP_NO_BUILD_ISOLATION=1
+ENV PIP_PREFER_BINARY=1
 
 # Setup base
 RUN apk update && apk add --no-cache \
@@ -22,6 +26,8 @@ RUN apk update && apk add --no-cache \
     linux-headers \
     opus \
     opus-dev \
+    py3-cffi \
+    py3-cryptography \
     py3-opencv \
     py3-pip \
     python3 \
