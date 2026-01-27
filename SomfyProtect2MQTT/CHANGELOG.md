@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026.1.1
+
+- Fixed: Boolean conversion [#236](https://github.com/Minims/SomfyProtect2MQTT/issues/236)
+
 ## 2026.1.0
 
 - Fixed: No file descriptor available
