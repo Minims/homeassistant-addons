@@ -1,5 +1,68 @@
 ---
 configuration:
-  message:
-    name: Message
-    description: The message that will be printed to the log when starting this  add-on.
+  somfy_protect:
+    name: Somfy Protect
+    description: Somfy Protect account configuration.
+  somfy_protect.username:
+    name: Username
+    description: Email address used for your Somfy Protect account.
+  somfy_protect.password:
+    name: Password
+    description: Password for your Somfy Protect account.
+  somfy_protect.sites:
+    name: Sites
+    description: List of Somfy Protect site names to monitor.
+  homeassistant_config:
+    name: Home Assistant Config
+    description: Home Assistant alarm panel configuration.
+  homeassistant_config.code:
+    name: Code
+    description: Code to arm/disarm the alarm in Home Assistant. Set to 0 to disable.
+  homeassistant_config.code_arm_required:
+    name: Code Arm Required
+    description: Require code to arm the alarm.
+  homeassistant_config.code_disarm_required:
+    name: Code Disarm Required
+    description: Require code to disarm the alarm.
+  mqtt:
+    name: MQTT
+    description: MQTT broker configuration. Leave empty to use Home Assistant MQTT service.
+  mqtt.host:
+    name: Host
+    description: MQTT broker hostname or IP address.
+  mqtt.port:
+    name: Port
+    description: MQTT broker port.
+  mqtt.ssl:
+    name: SSL
+    description: Enable SSL/TLS connection to MQTT broker.
+  mqtt.username:
+    name: Username
+    description: MQTT broker username.
+  mqtt.password:
+    name: Password
+    description: MQTT broker password.
+  mqtt.client-id:
+    name: Client ID
+    description: MQTT client identifier.
+  mqtt.topic_prefix:
+    name: Topic Prefix
+    description: MQTT topic prefix for publishing data.
+  mqtt.ha_discover_prefix:
+    name: HA Discovery Prefix
+    description: MQTT topic prefix for Home Assistant discovery.
+  delay_site:
+    name: Site Delay
+    description: Delay in seconds between site status updates.
+  delay_device:
+    name: Device Delay
+    description: Delay in seconds between device status updates.
+  manual_snapshot:
+    name: Manual Snapshot
+    description: If disabled, snapshots update only when triggered. If enabled, auto-update every minute.
+  streaming:
+    name: Streaming Mode
+    description: "Video streaming mode: 'mqtt' for MQTT camera, 'go2rtc' for WebRTC integration."
+  debug:
+    name: Debug
+    description: Enable debug logging for troubleshooting.

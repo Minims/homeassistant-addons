@@ -56,7 +56,7 @@ options:
 schema:
   somfy_protect:
     username: str
-    password: str
+    password: password
     sites:
       - str
   homeassistant_config:
@@ -68,7 +68,7 @@ schema:
     port: int?
     ssl: bool?
     username: str?
-    password: str?
+    password: password?
     client-id: str?
     topic_prefix: str?
     ha_discover_prefix: str?
