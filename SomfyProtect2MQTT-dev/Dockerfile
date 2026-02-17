@@ -25,7 +25,6 @@ RUN apk update && apk add --no-cache \
     opus-dev \
     py3-cffi \
     py3-cryptography \
-    py3-opencv \
     py3-pip \
     python3 \
     python3-dev \
@@ -53,3 +52,6 @@ RUN tar -xvf dev.tar.gz && mv /usr/bin/SomfyProtect2MQTT-dev /usr/bin/SomfyProte
 # Install python3 requirements
 WORKDIR /usr/bin/SomfyProtect2MQTT/somfyProtect2Mqtt
 RUN pip3 install --no-cache-dir --retries 5 --resume-retries 5 --timeout 120 -r requirements/addon.txt
+
+# Install opencv after pip to avoid invalid version metadata crash
+RUN apk add --no-cache py3-opencv
