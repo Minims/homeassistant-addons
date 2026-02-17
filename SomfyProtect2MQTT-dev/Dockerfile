@@ -38,4 +38,4 @@ RUN tar -xvf dev.tar.gz && mv /usr/bin/SomfyProtect2MQTT-dev /usr/bin/SomfyProte
 
 # Install python3 requirements
 WORKDIR /usr/bin/SomfyProtect2MQTT/somfyProtect2Mqtt
-RUN pip3 install --no-cache-dir -r requirements/addon.txt
+RUN pip3 install --no-cache-dir --retries 5 --resume-retries 5 --timeout 120 -r requirements/addon.txt
