@@ -5,17 +5,15 @@ version: 2024.9.2
 slug: myfox-2-mqtt
 description: Publish MyFox Alarm as MQTT messages
 url: https://github.com/Minims/homeassistant-addons/tree/main/MyFox2MQTT
-startup: application
 services:
   - mqtt:need
-boot: auto
 arch:
   - aarch64
   - amd64
 init: false
 map:
   - share:rw
-  - config:rw
+  - homeassistant_config:rw
 options:
   myfox:
     username: mail@example.org
