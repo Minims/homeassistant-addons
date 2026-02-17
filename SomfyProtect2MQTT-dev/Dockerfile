@@ -31,6 +31,20 @@ RUN apk update && apk add --no-cache \
     python3-dev \
     yq
 
+# Fix Alpine dist-info version strings so pip can parse them
+RUN python3 - <<'PY'
+from pathlib import Path
+import site
+
+for base in map(Path, site.getsitepackages()):
+    if not base.exists():
+        continue
+    for meta in base.rglob("*.dist-info/METADATA"):
+        text = meta.read_text()
+        if "Version: python-" in text:
+            meta.write_text(text.replace("Version: python-", "Version: "))
+PY
+
 # Download source and untar
 WORKDIR /usr/bin
 ADD "https://github.com/Minims/SomfyProtect2MQTT/archive/refs/heads/dev.tar.gz" dev.tar.gz
