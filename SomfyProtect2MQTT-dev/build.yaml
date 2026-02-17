@@ -1,8 +1,8 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 build_from:
-  aarch64: ghcr.io/hassio-addons/base:16.3.6
-  amd64: ghcr.io/hassio-addons/base:16.3.6
+  aarch64: ghcr.io/hassio-addons/app-base:20.0.1
+  amd64: ghcr.io/hassio-addons/app-base:20.0.1
 labels:
   org.opencontainers.image.title: "Home Assistant Add-on: SomfyProtect2MQTT (dev)"
   org.opencontainers.image.description: "Publish Somfy Home Alarm as MQTT messages - Development branch."
