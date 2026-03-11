@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.3.0
+
+- Refactor: Major codebase refactor
+- Fixed: Issues [#241](https://github.com/Minims/SomfyProtect2MQTT/issues/241), [#240](https://github.com/Minims/SomfyProtect2MQTT/issues/240), [#239](https://github.com/Minims/SomfyProtect2MQTT/issues/239)
+
 ## 2026.1.1
 
 - Fixed: Boolean conversion [#236](https://github.com/Minims/SomfyProtect2MQTT/issues/236)
