@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.3.1
+
+- Fixed: Somfy SSO token rate-limit handling (retry-after honored, retry/backoff, improved logs)
+- Fixed: MQTT startup broker connection context logging (host/port/ssl) with clearer init failure
+
 ## 2026.3.0
 
 - Refactor: Major codebase refactor
