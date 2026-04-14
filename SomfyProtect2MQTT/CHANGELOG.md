@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026.4.0
+
+- Fixed: SSO fallback on OAuth refresh errors
+
 ## 2026.3.1
 
 - Fixed: Somfy SSO token rate-limit handling (retry-after honored, retry/backoff, improved logs)
