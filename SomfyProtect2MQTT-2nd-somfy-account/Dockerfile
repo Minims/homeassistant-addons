@@ -4,7 +4,7 @@ FROM ${BUILD_FROM}
 ENV LANG=C.UTF-8
 
 # SomfyProtect2MQTT version
-ARG VERSION=2026.3.1
+ARG VERSION=2026.4.0
 
 # Copy root filesystem
 COPY rootfs /
