@@ -63,6 +63,12 @@ configuration:
   streaming:
     name: Streaming Mode
     description: "Video streaming mode: 'mqtt' for MQTT camera, 'go2rtc' for WebRTC integration."
+  hls_host:
+    name: HLS Host
+    description: Address used by the HLS server. Keep 0.0.0.0 for the Home Assistant add-on.
+  hls_port:
+    name: HLS Port
+    description: Port used by the HLS server.
   debug:
     name: Debug
     description: Enable debug logging for troubleshooting.

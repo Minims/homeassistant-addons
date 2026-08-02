@@ -43,6 +43,8 @@ delay_site: "10"
 delay_device: "60"
 manual_snapshot: false
 streaming: mqtt
+hls_host: 0.0.0.0
+hls_port: 8090
 debug: false
 ```
 
@@ -115,6 +117,14 @@ mqtt: Send image by image to MQTT camera in HA
 go2rtc: write the url in /config/somfyprotect2mqtt/stream*url*<device_id>
 to be read with echo source: https://github.com/AlexxIT/go2rtc#source-echo
 and WebRTC Camera:https://github.com/AlexxIT/WebRTC
+
+### Option `hls_host`
+
+Address used by the HLS server. Keep `0.0.0.0` for the Home Assistant add-on.
+
+### Option `hls_port`
+
+Port used by the HLS server. The default is `8090`.
 
 ### Option `debug`
 

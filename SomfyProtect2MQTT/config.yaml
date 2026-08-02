@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: SomfyProtect2MQTT
-version: 2026.4.0
+version: 2026.8.0
 slug: somfy-protect-2-mqtt
 description: "Publish Somfy Home Alarm as MQTT messages"
 url: https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT
@@ -52,6 +52,8 @@ options:
   delay_device: "60"
   manual_snapshot: false
   streaming: mqtt
+  hls_host: 0.0.0.0
+  hls_port: 8090
   debug: false
 schema:
   somfy_protect:
@@ -76,4 +78,6 @@ schema:
   delay_device: int?
   manual_snapshot: bool
   streaming: str?
+  hls_host: str?
+  hls_port: int?
   debug: bool

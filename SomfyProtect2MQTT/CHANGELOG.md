@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.8.0
+
+- Fixed: go2rtc HLS segment generation
+- Added: Configurable HLS server host and port
+
 ## 2026.4.0
 
 - Fixed: SSO fallback on OAuth refresh errors
