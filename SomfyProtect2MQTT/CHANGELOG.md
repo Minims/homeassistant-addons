@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026.8.2
+
+- Fixed: Migrate existing numeric alarm codes to text without blocking add-on updates
+
 ## 2026.8.1
 
 - Fixed: WebRTC streaming stability by reusing the site's TURN credential ([#263](https://github.com/Minims/SomfyProtect2MQTT/pull/263))
