@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.8.1
+
+- Fixed: WebRTC streaming stability by reusing the site's TURN credential ([#263](https://github.com/Minims/SomfyProtect2MQTT/pull/263))
+- Fixed: Preserve leading zeroes in Home Assistant alarm codes ([#266](https://github.com/Minims/SomfyProtect2MQTT/pull/266))
+
 ## 2026.8.0
 
 - Fixed: go2rtc HLS segment generation

@@ -26,7 +26,7 @@ somfy_protect:
     - Maison
 
 homeassistant_config:
-  code: 1234
+  code: "1234"
   code_arm_required: false
   code_disarm_required: true
 
