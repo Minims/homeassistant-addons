@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026.8.3
+
+- Fixed: config folder permission error and rate-limit lock contention ([#268](https://github.com/Minims/SomfyProtect2MQTT/pull/268))
+
 ## 2026.8.2
 
 - Fixed: Migrate existing numeric alarm codes to text without blocking add-on updates
