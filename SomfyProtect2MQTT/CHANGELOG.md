@@ -5,6 +5,7 @@
 - Added: Expose device MAC connections in Home Assistant MQTT discovery
 - Added: Associate Somfy badges with Bluetooth devices using `homeassistant_config.device_macs`
 - Fixed: Distinguish Bluetooth addresses from network MAC connections
+- Fixed: Invalid generated YAML when configuring badge Bluetooth addresses
 
 ## 2026.8.3
 
