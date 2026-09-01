@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026.9.0
+
+- Added: Expose device MAC connections in Home Assistant MQTT discovery
+- Added: Associate Somfy badges with Bluetooth devices using `homeassistant_config.device_macs`
+- Fixed: Distinguish Bluetooth addresses from network MAC connections
+
 ## 2026.8.3
 
 - Fixed: config folder permission error and rate-limit lock contention ([#268](https://github.com/Minims/SomfyProtect2MQTT/pull/268))
