@@ -1,7 +1,7 @@
 ---
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: SomfyProtect2MQTT-dev
-version: 2026.8.3
+version: 2026.9.0
 slug: somfy-protect-2-mqtt-dev
 description: "Publish Somfy Home Alarm as MQTT messages (dev branch)"
 url: https://github.com/Minims/homeassistant-addons/tree/main/SomfyProtect2MQTT-dev
@@ -42,6 +42,7 @@ options:
     code: "0"
     code_arm_required: false
     code_disarm_required: false
+    device_macs: []
   mqtt:
     client-id: somfy-protect
     topic_prefix: somfyProtect2mqtt-dev
@@ -63,6 +64,9 @@ schema:
     code: match(^[0-9]+$)?
     code_arm_required: bool
     code_disarm_required: bool
+    device_macs:
+      - device: str
+        mac: "match(^([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}$)"
   mqtt:
     host: str?
     port: int?
