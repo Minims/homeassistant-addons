@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026.10.0
+
+- Added: Expose history attributes through MQTT JSON attributes
+- Fixed: Publish history events from oldest to newest
+
 ## 2026.9.0
 
 - Added: Expose device MAC connections in Home Assistant MQTT discovery
