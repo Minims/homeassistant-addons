@@ -17,7 +17,21 @@ Go to the _Supervisor_ Panel, select _Add-on Store_, click the three little dots
 
 ## Add-ons
 
-This repository contains the following add-ons
+Installation counts come from [Home Assistant Analytics](https://analytics.home-assistant.io/addons.json) and are refreshed daily by GitHub Actions. They include only installations that opted into usage analytics, and combine this repository's URLs with and without a trailing slash. They are not download counts or the total number of users. [About HA analytics](https://www.home-assistant.io/integrations/analytics/).
+
+<!-- installations:start -->
+
+| Add-on | Reported installations |
+| --- | ---: |
+| [MyFox2MQTT](./MyFox2MQTT) | 33 |
+| [MyFox2MQTT-dev](./MyFox2MQTT-dev) | 5 |
+| [SomfyProtect2MQTT](./SomfyProtect2MQTT) | 613 |
+| [SomfyProtect2MQTT - 2nd Somfy Account](./SomfyProtect2MQTT-2nd-somfy-account) | 13 |
+| [SomfyProtect2MQTT-dev](./SomfyProtect2MQTT-dev) | 20 |
+
+Last refreshed: 2026-10-02 (UTC).
+
+<!-- installations:end -->
 
 ### <img src="SomfyProtect2MQTT/icon.png" width="40px"> [SomfyProtect2MQTT add-on](./SomfyProtect2MQTT)
 
