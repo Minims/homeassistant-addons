@@ -29,6 +29,9 @@ homeassistant_config:
   code: "1234"
   code_arm_required: false
   code_disarm_required: true
+  device_macs:
+    - device: "<Somfy badge device ID or unique label>"
+      mac: "AA:BB:CC:DD:EE:FF"
 
 mqtt:
   host: 192.168.1.1
@@ -75,6 +78,12 @@ Set to `false` if you want to arm without code
 #### Option `code_disarm_required`
 
 Set to `false` if you want to disarm without code
+
+#### Option `device_macs`
+
+Optional list used to associate Somfy badges with Bluetooth devices in Home Assistant. For each badge, set `device`
+to its Somfy device ID when possible, or to its unique label, and set `mac` to the Bluetooth address shown as
+`Address` in Home Assistant. Restart the add-on after changing this option so MQTT discovery is republished.
 
 ### Option group `mqtt`
 

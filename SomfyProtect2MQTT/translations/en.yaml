@@ -24,6 +24,16 @@ configuration:
   homeassistant_config.code_disarm_required:
     name: Code Disarm Required
     description: Require code to disarm the alarm.
+  homeassistant_config.device_macs:
+    name: Badge Bluetooth Addresses
+    description: Associate Somfy badges with Bluetooth devices in Home Assistant.
+    fields:
+      device:
+        name: Somfy Device
+        description: Somfy device ID, or a unique badge label.
+      mac:
+        name: Bluetooth Address
+        description: Bluetooth MAC address shown as Address in Home Assistant.
   mqtt:
     name: MQTT
     description: MQTT broker configuration. Leave empty to use Home Assistant MQTT service.
