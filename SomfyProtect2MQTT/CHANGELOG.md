@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026.10.1a (dev)
+
+- Added: SOS button per site in Home Assistant using Somfy's silent panic mode
+
 ## 2026.10.0
 
 - Added: Expose history attributes through MQTT JSON attributes
