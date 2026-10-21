@@ -29,7 +29,7 @@ Installation counts come from [Home Assistant Analytics](https://analytics.home-
 | [SomfyProtect2MQTT - 2nd Somfy Account](./SomfyProtect2MQTT-2nd-somfy-account) | 14 |
 | [SomfyProtect2MQTT-dev](./SomfyProtect2MQTT-dev) | 22 |
 
-Last refreshed: 2026-10-20 (UTC).
+Last refreshed: 2026-10-21 (UTC).
 
 <!-- installations:end -->
 
