@@ -1,8 +1,10 @@
 # Changelog
 
-## 2026.10.1a (dev)
+## 2026.11.0 (dev)
 
 - Added: SOS button per site in Home Assistant using Somfy's silent panic mode
+- Fixed: Preserve the triggered alarm state during periodic refreshes while an alarm is in progress ([#272](https://github.com/Minims/SomfyProtect2MQTT/pull/272))
+- Fixed: Prevent outdated API responses from overwriting newer alarm or security events during concurrent updates
 
 ## 2026.10.0
 
