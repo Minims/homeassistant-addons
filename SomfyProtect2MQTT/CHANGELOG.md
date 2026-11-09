@@ -2,6 +2,7 @@
 
 ## 2026.11.1 (dev)
 
+- Fixed: Replace deprecated `build.yaml` with Dockerfile build settings and migrate the `addon_config` map type to `app_config`, preserving the mount path
 - Updated: Add-on base image from `20.0.1` to `21.0.10` for amd64 and aarch64
 - Added: MQTT availability reporting when the Somfy API cannot be reached, with recovery when connectivity returns
 - Fixed: Isolate WebRTC sessions and reset HLS resources after hangup so streaming can restart

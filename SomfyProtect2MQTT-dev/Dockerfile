@@ -1,6 +1,10 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:21.0.10
 FROM ${BUILD_FROM}
+LABEL org.opencontainers.image.title="Home Assistant Add-on: SomfyProtect2MQTT (dev)" \
+      org.opencontainers.image.description="Publish Somfy Home Alarm as MQTT messages - Development branch." \
+      org.opencontainers.image.source="https://github.com/Minims/homeassistant-addons" \
+      org.opencontainers.image.licenses="Apache License 2.0"
 ENV LANG=C.UTF-8
 
 # Copy root filesystem
