@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026.11.1 (dev)
+
+- Updated: Add-on base image from `20.0.1` to `21.0.10` for amd64 and aarch64
+- Added: MQTT availability reporting when the Somfy API cannot be reached, with recovery when connectivity returns
+- Fixed: Isolate WebRTC sessions and reset HLS resources after hangup so streaming can restart
+
 ## 2026.11.0 (dev)
 
 - Added: SOS button per site in Home Assistant using Somfy's silent panic mode
