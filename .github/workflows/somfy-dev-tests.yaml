@@ -1,5 +1,7 @@
+---
 name: Somfy dev addon tests
 
+# yamllint disable-line rule:truthy
 on:
   push:
     paths:
