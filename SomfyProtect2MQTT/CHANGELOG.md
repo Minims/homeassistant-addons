@@ -1,8 +1,20 @@
 # Changelog
 
-## 2026.11.1 (dev)
+## 2026.11.3 (dev)
+
+- Updated: Pin SomfyProtect2MQTT 2026.11.3 and validate the Python 3.14 runtime
+- Fixed: Serialize WebRTC shutdown and drain pending asynchronous tasks before closing the event loop
+- Fixed: Keep generated configuration and the Somfy token in persistent `/data` storage
+- Fixed: Preserve special characters in MQTT credentials and stop printing configuration secrets
+- Fixed: Build the native CRC32C extension and use the current s6 user bundle directory
+- Added: Startup regression tests and amd64/arm64 image checks, including native HLS codecs
+
+## 2026.11.2 (dev)
 
 - Fixed: Replace deprecated `build.yaml` with Dockerfile build settings and migrate the `addon_config` map type to `app_config`, preserving the mount path
+
+## 2026.11.1 (dev)
+
 - Updated: Add-on base image from `20.0.1` to `21.0.10` for amd64 and aarch64
 - Added: MQTT availability reporting when the Somfy API cannot be reached, with recovery when connectivity returns
 - Fixed: Isolate WebRTC sessions and reset HLS resources after hangup so streaming can restart
