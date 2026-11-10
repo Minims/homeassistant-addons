@@ -10,12 +10,12 @@ ENV LANG=C.UTF-8
 # Copy root filesystem
 COPY rootfs /
 
-# Do not compile packages from source
-ENV PIP_NO_BUILD_ISOLATION=1
+# Prefer wheels except for CRC32C, which needs a native musl build.
 ENV PIP_PREFER_BINARY=1
 
 # Setup base
 RUN apk update && apk add --no-cache \
+    crc32c \
     ffmpeg \
     ffmpeg-dev \
     libjxl \
@@ -48,14 +48,36 @@ for base in map(Path, site.getsitepackages()):
             meta.write_text(text.replace("Version: python-", "Version: "))
 PY
 
-# Download source and untar
-WORKDIR /usr/bin
-ADD "https://github.com/Minims/SomfyProtect2MQTT/archive/refs/heads/dev.tar.gz" dev.tar.gz
-RUN tar -xvf dev.tar.gz && mv /usr/bin/SomfyProtect2MQTT-dev /usr/bin/SomfyProtect2MQTT
+# Pin the tested dev revision so rebuilding the addon uses the same code.
+ARG SOMFY_REF=4294e09a7c802f863b8eb2106dd0d1eb95f4c4e9
+ADD "https://github.com/Minims/SomfyProtect2MQTT/archive/${SOMFY_REF}.tar.gz" /tmp/somfy.tar.gz
+RUN mkdir -p /usr/bin/SomfyProtect2MQTT \
+    && tar -xzf /tmp/somfy.tar.gz --strip-components=1 -C /usr/bin/SomfyProtect2MQTT \
+    && rm /tmp/somfy.tar.gz
 
 # Install python3 requirements
 WORKDIR /usr/bin/SomfyProtect2MQTT/somfyProtect2Mqtt
-RUN pip3 install --no-cache-dir --retries 5 --resume-retries 5 --timeout 120 -r requirements/addon.txt
+RUN apk add --no-cache --virtual .crc32c-build build-base crc32c-dev \
+    && CRC32C_PURE_PYTHON=0 pip3 install --no-cache-dir --no-binary=google-crc32c \
+        --retries 5 --resume-retries 5 --timeout 120 -r requirements/addon.txt \
+    && pip3 check \
+    && apk del .crc32c-build
 
 # Install opencv after pip to avoid invalid version metadata crash
 RUN apk add --no-cache py3-opencv
+
+# Fail the build if the addon runtime drifts or a native backend cannot load.
+RUN python3 - <<'PYTHON'
+import sys
+import runpy
+import aiortc
+import av
+import cv2
+import google_crc32c
+assert sys.version_info[:2] == (3, 14), sys.version
+assert google_crc32c.implementation == "c", "CRC32C native extension is missing"
+assert google_crc32c.value(b"123456789") == 0xE3069283
+assert cv2.videoio_registry.hasBackend(cv2.CAP_FFMPEG), "OpenCV FFmpeg backend is missing"
+runpy.run_path("tests/test_media_codecs.py")["test_hls_segment_encodes_and_decodes_video_and_audio"]()
+print(f"Python {sys.version.split()[0]}, aiortc {aiortc.__version__}, PyAV {av.__version__}, OpenCV {cv2.__version__}")
+PYTHON
