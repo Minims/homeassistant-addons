@@ -5,12 +5,12 @@ name: Somfy dev addon tests
 on:
   push:
     paths:
-      - 'SomfyProtect2MQTT-dev/**'
-      - '.github/workflows/somfy-dev-tests.yaml'
+      - "SomfyProtect2MQTT-dev/**"
+      - ".github/workflows/somfy-dev-tests.yaml"
   pull_request:
     paths:
-      - 'SomfyProtect2MQTT-dev/**'
-      - '.github/workflows/somfy-dev-tests.yaml'
+      - "SomfyProtect2MQTT-dev/**"
+      - ".github/workflows/somfy-dev-tests.yaml"
   workflow_dispatch:
 
 jobs:
