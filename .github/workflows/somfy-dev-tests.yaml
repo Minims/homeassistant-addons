@@ -21,7 +21,7 @@ jobs:
         arch: [amd64, arm64]
     steps:
       - uses: actions/checkout@v4
-      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-qemu-action@v4
       - name: Check shell scripts
         run: shellcheck SomfyProtect2MQTT-dev/rootfs/etc/s6-overlay/s6-rc.d/SomfyProtect2MQTT/{run,finish}
       - name: Build and check native backends
