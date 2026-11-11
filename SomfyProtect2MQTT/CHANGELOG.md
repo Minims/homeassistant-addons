@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026.11.5 (dev)
+
+- Fixed: Retry server-initiated WebRTC hang-ups with bounded 2, 5 and 15 second backoff
+- Fixed: Cancel stale WebRTC retries when a newer session starts or the add-on shuts down
+- Fixed: Align HLS audio startup with the first decoded video frame
+- Fixed: Limit repeated H264 startup warnings while preserving other decoder errors
+- Added: Document go2rtc AAC-to-Opus audio conversion for WebRTC playback
+
 ## 2026.11.4 (dev)
 
 - Fixed: Use matching video frame and encoder time bases so HLS segments have correct playback timing

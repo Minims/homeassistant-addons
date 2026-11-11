@@ -49,7 +49,7 @@ for base in map(Path, site.getsitepackages()):
 PY
 
 # Pin the tested dev revision so rebuilding the addon uses the same code.
-ARG SOMFY_REF=c8f28409a3fb47c1cc09f168d8549f7841917585
+ARG SOMFY_REF=d4cfcae5c1d149e8aa83665312cf584c05e2cf03
 ADD "https://github.com/Minims/SomfyProtect2MQTT/archive/${SOMFY_REF}.tar.gz" /tmp/somfy.tar.gz
 RUN mkdir -p /usr/bin/SomfyProtect2MQTT \
     && tar -xzf /tmp/somfy.tar.gz --strip-components=1 -C /usr/bin/SomfyProtect2MQTT \
