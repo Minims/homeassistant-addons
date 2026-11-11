@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026.11.4 (dev)
+
+- Fixed: Use matching video frame and encoder time bases so HLS segments have correct playback timing
+- Fixed: Send HTTP content lengths for HLS playlists and segments to avoid premature-end errors in players
+- Added: Live HLS timing, audio/video synchronization and HTTP response tests in addon image builds
+
 ## 2026.11.3 (dev)
 
 - Updated: Pin SomfyProtect2MQTT 2026.11.3 and validate the Python 3.14 runtime

@@ -49,7 +49,7 @@ for base in map(Path, site.getsitepackages()):
 PY
 
 # Pin the tested dev revision so rebuilding the addon uses the same code.
-ARG SOMFY_REF=4294e09a7c802f863b8eb2106dd0d1eb95f4c4e9
+ARG SOMFY_REF=b943e0f506de2acd9f9dce88cd1171643e5f0196
 ADD "https://github.com/Minims/SomfyProtect2MQTT/archive/${SOMFY_REF}.tar.gz" /tmp/somfy.tar.gz
 RUN mkdir -p /usr/bin/SomfyProtect2MQTT \
     && tar -xzf /tmp/somfy.tar.gz --strip-components=1 -C /usr/bin/SomfyProtect2MQTT \
@@ -78,6 +78,10 @@ assert sys.version_info[:2] == (3, 14), sys.version
 assert google_crc32c.implementation == "c", "CRC32C native extension is missing"
 assert google_crc32c.value(b"123456789") == 0xE3069283
 assert cv2.videoio_registry.hasBackend(cv2.CAP_FFMPEG), "OpenCV FFmpeg backend is missing"
-runpy.run_path("tests/test_media_codecs.py")["test_hls_segment_encodes_and_decodes_video_and_audio"]()
+codec_tests = runpy.run_path("tests/test_media_codecs.py")
+codec_tests["test_hls_segment_encodes_and_decodes_video_and_audio"]()
+codec_tests["test_live_hls_video_timestamps_match_playlist_durations"]()
+codec_tests["test_live_hls_audio_and_video_stay_synchronized"]()
+runpy.run_path("tests/test_hls_http.py")["test_hls_responses_advertise_the_complete_body_length"]()
 print(f"Python {sys.version.split()[0]}, aiortc {aiortc.__version__}, PyAV {av.__version__}, OpenCV {cv2.__version__}")
 PYTHON
