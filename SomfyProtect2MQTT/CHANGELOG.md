@@ -4,6 +4,7 @@
 
 - Fixed: Use matching video frame and encoder time bases so HLS segments have correct playback timing
 - Fixed: Send HTTP content lengths for HLS playlists and segments to avoid premature-end errors in players
+- Fixed: Drain queued audio frames and render timestamps outside the network event loop to preserve synchronization under load
 - Added: Live HLS timing, audio/video synchronization and HTTP response tests in addon image builds
 
 ## 2026.11.3 (dev)
