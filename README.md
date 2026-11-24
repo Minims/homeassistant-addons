@@ -25,11 +25,11 @@ Installation counts come from [Home Assistant Analytics](https://analytics.home-
 | --- | ---: |
 | [MyFox2MQTT](./MyFox2MQTT) | 35 |
 | [MyFox2MQTT-dev](./MyFox2MQTT-dev) | 6 |
-| [SomfyProtect2MQTT](./SomfyProtect2MQTT) | 676 |
+| [SomfyProtect2MQTT](./SomfyProtect2MQTT) | 677 |
 | [SomfyProtect2MQTT - 2nd Somfy Account](./SomfyProtect2MQTT-2nd-somfy-account) | 15 |
 | [SomfyProtect2MQTT-dev](./SomfyProtect2MQTT-dev) | 25 |
 
-Last refreshed: 2026-11-23 (UTC).
+Last refreshed: 2026-11-24 (UTC).
 
 <!-- installations:end -->
 
