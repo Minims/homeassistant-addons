@@ -17,7 +17,7 @@ bashio::log.info "Configuration :"
 bashio::log.info "$(cat /usr/bin/MyFox2MQTT/myFox2Mqtt/config/config.yaml)"
 
 debug=""
-if $(bashio::config.true debug); then
+if bashio::config.true debug; then
     bashio::log.info "Will be started in debug mode"
     debug="-v"
 fi
