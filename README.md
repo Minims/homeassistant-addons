@@ -27,7 +27,7 @@ Last refreshed: 2026-11-28 (UTC).
 
 <!-- installations-graph -->
 
-![Installation evolution over the last year](.github/data/installations.svg?v=5be74ae)
+![Installation evolution over the last year](.github/data/installations.svg?v=2026-11-28)
 
 ### <img src="SomfyProtect2MQTT/icon.png" width="40px"> [SomfyProtect2MQTT add-on](./SomfyProtect2MQTT)
 

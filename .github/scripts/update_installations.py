@@ -144,7 +144,7 @@ def update_files(root, analytics, refreshed=None):
     readme = root / "README.md"
     content = readme_with_installations(readme.read_text(encoding="utf-8"), analytics, configs, refreshed)
     marker = "<!-- installations-graph -->"
-    graph = f'{marker}\n\n![Installation evolution over the last year](.github/data/installations.svg)\n'
+    graph = f'{marker}\n\n![Installation evolution over the last year](.github/data/installations.svg?v={refreshed})\n'
     content = re.sub(r"<!-- installations-graph -->.*?(?=\n### )", graph, content, flags=re.DOTALL)
     if marker not in content:
         content = content.replace("<!-- installations:end -->", "<!-- installations:end -->\n\n" + graph)
