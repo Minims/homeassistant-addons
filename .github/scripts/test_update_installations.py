@@ -48,5 +48,5 @@ svg = render_svg(
     {"2025-01-01": {"SomfyProtect2MQTT": 1}, "2025-01-02": {"SomfyProtect2MQTT": 2}},
     sorted(root.glob("*/config.yaml")),
 )
-assert "<svg" in svg and "SomfyProtect2MQTT" in svg
+assert "<svg" in svg and "installations" in svg and "<rect" in svg
 print("Installation updater checks passed")

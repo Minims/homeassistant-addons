@@ -13,7 +13,7 @@ PREFIXES = tuple(
     for url in (REPOSITORY_URL, REPOSITORY_URL + "/")
 )
 HISTORY_DAYS = 365
-GRAPH_WIDTH = 900
+GRAPH_WIDTH = 1100
 GRAPH_HEIGHT = 360
 
 
@@ -67,36 +67,47 @@ def update_history(history, refreshed, counts):
 
 
 def render_svg(history, configs):
-    addons = addon_metadata(configs)
     days = sorted(history)
-    values = [count for day in days for count in history[day].values()]
-    maximum = max(values, default=1)
-    left, top, plot_width, plot_height = 70, 30, GRAPH_WIDTH - 100, GRAPH_HEIGHT - 90
-    colors = ["#03a9f4", "#ff9800", "#4caf50", "#e91e63", "#9c27b0"]
+    totals = {day: sum(history[day].values()) for day in days}
+    maximum = max(totals.values(), default=0)
+    cell, gap = 13, 3
+    left, top, legend_left = 32, 24, 780
+    colors = ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
     lines = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {GRAPH_WIDTH} {GRAPH_HEIGHT}" role="img">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {GRAPH_WIDTH} 190" role="img">',
         '<title>Home Assistant add-on installations over the last year</title>',
         '<rect width="100%" height="100%" fill="white"/>',
-        f'<line x1="{left}" y1="{top + plot_height}" x2="{left + plot_width}" y2="{top + plot_height}" stroke="#666"/>',
-        f'<line x1="{left}" y1="{top}" x2="{left}" y2="{top + plot_height}" stroke="#666"/>',
+        '<text x="32" y="14" fill="#24292f" font-size="12">Installations</text>',
     ]
     if days:
-        for index, addon in enumerate(addons):
-            points = []
-            for position, day in enumerate(days):
-                x = left + (position * plot_width / max(len(days) - 1, 1))
-                y = top + plot_height - history[day].get(addon["directory"], 0) * plot_height / maximum
-                points.append(f"{x:.1f},{y:.1f}")
-            color = colors[index % len(colors)]
+        first = date.fromisoformat(days[0])
+        start = first - timedelta(days=(first.weekday() + 1) % 7)
+        for offset in range(((date.fromisoformat(days[-1]) - start).days // 7 + 1) * 7):
+            day = start + timedelta(days=offset)
+            if day.day == 1 or offset == 0:
+                column = offset // 7
+                lines.append(f'<text x="{left + column * (cell + gap)}" y="22" font-size="10">{day:%b}</text>')
+            if offset % 7 == 1:
+                lines.append(f'<text x="2" y="{top + (offset % 7) * (cell + gap) + 10}" font-size="9">Mon</text>')
+            if day.isoformat() not in totals:
+                continue
+            total = totals[day.isoformat()]
+            level = 0 if maximum == 0 else min(4, (total * 4) // maximum + (total > 0))
+            column, row = offset // 7, offset % 7
+            x, y = left + column * (cell + gap), top + row * (cell + gap)
             lines.append(
-                f'<polyline points="{" ".join(points)}" fill="none" stroke="{color}" stroke-width="2"/>'
+                f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{colors[level]}"><title>{day.isoformat()}: {total} installations</title></rect>'
             )
-            legend_x = left + index * 170
-            lines.append(
-                f'<text x="{legend_x}" y="{GRAPH_HEIGHT - 25}" fill="{color}" font-size="12">{escape(addon["name"])}</text>'
-            )
-        lines.append(f'<text x="{left}" y="{GRAPH_HEIGHT - 8}" font-size="11">{days[0]}</text>')
-        lines.append(f'<text x="{left + plot_width - 70}" y="{GRAPH_HEIGHT - 8}" font-size="11">{days[-1]}</text>')
+    legend_y = 58
+    lines.append(f'<text x="{legend_left}" y="{legend_y - 14}" fill="#24292f" font-size="11">installations</text>')
+    for index, color in enumerate(colors):
+        x = legend_left + index * 24
+        lines.append(f'<rect x="{x}" y="{legend_y}" width="16" height="16" rx="2" fill="{color}"/>')
+    lines.append(f'<text x="{legend_left}" y="{legend_y + 32}" font-size="10">0</text>')
+    lines.append(f'<text x="{legend_left + 96}" y="{legend_y + 32}" font-size="10">{maximum} installations</text>')
+    if days:
+        lines.append(f'<text x="{left}" y="170" font-size="10">{days[0]}</text>')
+        lines.append(f'<text x="{left + 690}" y="170" font-size="10">{days[-1]}</text>')
     lines.append("</svg>")
     return "\n".join(lines) + "\n"
 
