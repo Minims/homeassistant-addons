@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img">
+<title>Home Assistant add-on installations over the last year</title>
+<rect width="100%" height="100%" fill="white"/>
+<line x1="70" y1="300" x2="870" y2="300" stroke="#666"/>
+<line x1="70" y1="30" x2="70" y2="300" stroke="#666"/>
+<polyline points="70.0,285.8" fill="none" stroke="#03a9f4" stroke-width="2"/>
+<text x="70" y="335" fill="#03a9f4" font-size="12">MyFox2MQTT</text>
+<polyline points="70.0,297.6" fill="none" stroke="#ff9800" stroke-width="2"/>
+<text x="240" y="335" fill="#ff9800" font-size="12">MyFox2MQTT-dev</text>
+<polyline points="70.0,30.0" fill="none" stroke="#4caf50" stroke-width="2"/>
+<text x="410" y="335" fill="#4caf50" font-size="12">SomfyProtect2MQTT</text>
+<polyline points="70.0,294.1" fill="none" stroke="#e91e63" stroke-width="2"/>
+<text x="580" y="335" fill="#e91e63" font-size="12">SomfyProtect2MQTT - 2nd Somfy Account</text>
+<polyline points="70.0,290.1" fill="none" stroke="#9c27b0" stroke-width="2"/>
+<text x="750" y="335" fill="#9c27b0" font-size="12">SomfyProtect2MQTT-dev</text>
+<text x="70" y="352" font-size="11">2026-11-28</text>
+<text x="800" y="352" font-size="11">2026-11-28</text>
+</svg>

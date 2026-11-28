@@ -4,7 +4,10 @@ from pathlib import Path
 
 script = Path(__file__).with_name("update_installations.py")
 assert script.exists(), "The README installation updater is missing"
-update = runpy.run_path(str(script))["readme_with_installations"]
+functions = runpy.run_path(str(script))
+update = functions["readme_with_installations"]
+update_history = functions["update_history"]
+render_svg = functions["render_svg"]
 root = script.parents[2]
 original = "Before\n<!-- installations:start -->\nOld counts\n<!-- installations:end -->\nAfter\n"
 counts = {
@@ -34,4 +37,16 @@ for readme, analytics in [
         pass
     else:
         raise AssertionError("Invalid input must not replace README counts")
+assert update_history({"2024-12-31": {"SomfyProtect2MQTT": 1}}, "2025-12-31", {"SomfyProtect2MQTT": 2}) == {
+    "2025-12-31": {"SomfyProtect2MQTT": 2}
+}
+assert update_history({"2025-01-01": {"SomfyProtect2MQTT": 1}}, "2025-01-02", {"SomfyProtect2MQTT": 2}) == {
+    "2025-01-01": {"SomfyProtect2MQTT": 1},
+    "2025-01-02": {"SomfyProtect2MQTT": 2},
+}
+svg = render_svg(
+    {"2025-01-01": {"SomfyProtect2MQTT": 1}, "2025-01-02": {"SomfyProtect2MQTT": 2}},
+    sorted(root.glob("*/config.yaml")),
+)
+assert "<svg" in svg and "SomfyProtect2MQTT" in svg
 print("Installation updater checks passed")
