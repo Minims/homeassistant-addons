@@ -71,10 +71,11 @@ def render_svg(history, configs):
     addons = addon_metadata(configs)
     values = [history[day].get(addon["directory"], 0) for day in days for addon in addons]
     maximum = max(values, default=1)
-    left, top, plot_width, plot_height = 70, 55, 820, 280
+    left, top, plot_width, plot_height = 70, 55, 820, 230
+    legend_top = 310
     colors = ["#0969da", "#cf222e", "#1a7f37", "#8250df", "#bf8700"]
     lines = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 390" role="img">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540" role="img">',
         '<title>Home Assistant add-on installations over the last year</title>',
         '<rect width="100%" height="100%" fill="white"/>',
         '<text x="70" y="22" fill="#24292f" font-size="16" font-weight="bold">Add-on installation history</text>',
@@ -96,12 +97,16 @@ def render_svg(history, configs):
             color = colors[index % len(colors)]
             lines.append(f'<polyline points="{" ".join(points)}" fill="none" stroke="{color}" stroke-width="2.5"/>')
             lines.append(f'<circle cx="{points[-1].split(",")[0]}" cy="{points[-1].split(",")[1]}" r="3" fill="{color}"/>')
-            legend_x = left + index * 210
+        lines.append(f'<text x="{left}" y="{legend_top - 14}" fill="#57606a" font-size="12">Latest value</text>')
+        for index, addon in enumerate(addons):
+            color = colors[index % len(colors)]
             latest_count = history[days[-1]].get(addon["directory"], 0)
-            lines.append(f'<line x1="{legend_x}" y1="365" x2="{legend_x + 18}" y2="365" stroke="{color}" stroke-width="3"/>')
-            lines.append(f'<text x="{legend_x + 24}" y="369" fill="#24292f" font-size="11">{escape(addon["name"])}: {latest_count} installations</text>')
-        lines.append(f'<text x="{left}" y="350" fill="#57606a" font-size="11">{days[0]}</text>')
-        lines.append(f'<text x="{left + plot_width - 70}" y="350" fill="#57606a" font-size="11">{days[-1]}</text>')
+            row_y = legend_top + index * 32
+            lines.append(f'<rect x="{left}" y="{row_y - 13}" width="10" height="10" rx="2" fill="{color}"/>')
+            lines.append(f'<text x="{left + 20}" y="{row_y - 3}" fill="#24292f" font-size="12">{escape(addon["name"])}</text>')
+            lines.append(f'<text x="{left + 820}" y="{row_y - 3}" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">{latest_count} installations</text>')
+        lines.append(f'<text x="{left}" y="290" fill="#57606a" font-size="11">{days[0]}</text>')
+        lines.append(f'<text x="{left + plot_width - 70}" y="290" fill="#57606a" font-size="11">{days[-1]}</text>')
     lines.append("</svg>")
     return "\n".join(lines) + "\n"
 
