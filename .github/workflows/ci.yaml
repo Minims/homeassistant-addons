@@ -11,8 +11,154 @@ on:
       - synchronize
   workflow_dispatch:
 
+permissions:
+  contents: read
+  security-events: write
+
 jobs:
-  workflows:
-    uses: hassio-addons/workflows/.github/workflows/addon-ci.yaml@main
-    with:
-      slug: SomfyProtect2MQTT-dev
+  global-lint:
+    name: Global ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: JSON Lint
+            run: |
+              shopt -s globstar nullglob
+              for file in **/*.json; do
+                jq '.' "$file" >/dev/null
+              done
+          - name: Prettier
+            run: npx --yes prettier@3.10.1 --check '**/*.{json,js,md,yaml}'
+          - name: YAML Lint
+            run: docker run --rm -v "$PWD:/workspace" -w /workspace cytopia/yamllint:1.37 .
+          - name: ShellCheck
+            run: |
+              shellcheck --version
+              find . -type f \( -name '*.sh' -o -name run -o -name finish -o -name healthcheck \) -print0 |
+                xargs -0 -r shellcheck -s bash
+          - name: Zizmor
+            run: zizmor .github/workflows
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install tools
+        if: matrix.name == 'ShellCheck' || matrix.name == 'Zizmor'
+        run: |
+          if [ "${{ matrix.name }}" = ShellCheck ]; then
+            sudo apt-get update
+            sudo apt-get install --yes shellcheck
+          else
+            pipx install zizmor
+          fi
+      - name: Run ${{ matrix.name }}
+        run: ${{ matrix.run }}
+
+  lint-app:
+    name: Lint ${{ matrix.app }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - app: MyFox2MQTT
+            community: false
+          - app: MyFox2MQTT-dev
+            community: true
+          - app: SomfyProtect2MQTT
+            community: false
+          - app: SomfyProtect2MQTT-dev
+            community: true
+          - app: SomfyProtect2MQTT-2nd-somfy-account
+            community: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: frenck/action-app-linter@v2.21.3
+        with:
+          path: ./${{ matrix.app }}
+          community: ${{ matrix.community }}
+
+  hadolint:
+    name: Hadolint ${{ matrix.app }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        app:
+          - MyFox2MQTT
+          - MyFox2MQTT-dev
+          - SomfyProtect2MQTT
+          - SomfyProtect2MQTT-dev
+          - SomfyProtect2MQTT-2nd-somfy-account
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: brpaz/hadolint-action@v1.5.0
+        with:
+          dockerfile: ./${{ matrix.app }}/Dockerfile
+
+  build:
+    name: Build ${{ matrix.app }} (${{ matrix.arch }})
+    needs: [global-lint, lint-app, hadolint]
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - app: MyFox2MQTT
+            arch: amd64
+            platform: linux/amd64
+          - app: MyFox2MQTT
+            arch: aarch64
+            platform: linux/arm64/v8
+          - app: MyFox2MQTT-dev
+            arch: amd64
+            platform: linux/amd64
+          - app: MyFox2MQTT-dev
+            arch: aarch64
+            platform: linux/arm64/v8
+          - app: SomfyProtect2MQTT
+            arch: amd64
+            platform: linux/amd64
+          - app: SomfyProtect2MQTT
+            arch: aarch64
+            platform: linux/arm64/v8
+          - app: SomfyProtect2MQTT-dev
+            arch: amd64
+            platform: linux/amd64
+          - app: SomfyProtect2MQTT-dev
+            arch: aarch64
+            platform: linux/arm64/v8
+          - app: SomfyProtect2MQTT-2nd-somfy-account
+            arch: amd64
+            platform: linux/amd64
+          - app: SomfyProtect2MQTT-2nd-somfy-account
+            arch: aarch64
+            platform: linux/arm64/v8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+      - name: Build ${{ matrix.app }}
+        env:
+          APP: ${{ matrix.app }}
+          ARCH: ${{ matrix.arch }}
+          PLATFORM: ${{ matrix.platform }}
+        run: |
+          build_args=("BUILD_ARCH=${ARCH}")
+          if [ -f "${APP}/build.yaml" ]; then
+            build_from=$(yq -r ".build_from.${ARCH}" "${APP}/build.yaml")
+            build_args+=("BUILD_FROM=${build_from}")
+            version=$(yq -r '.args.VERSION // ""' "${APP}/build.yaml")
+            if [ -n "${version}" ]; then
+              build_args+=("VERSION=${version}")
+            fi
+          fi
+          docker build --platform "${PLATFORM}" --build-arg "${build_args[0]}" $(printf -- '--build-arg %q ' "${build_args[@]:1}") "${APP}"
