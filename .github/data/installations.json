@@ -1,4 +1,396 @@
 {
+  "2026-10-03": {
+    "MyFox2MQTT": 33,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 613,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 20
+  },
+  "2026-10-04": {
+    "MyFox2MQTT": 33,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 613,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 20
+  },
+  "2026-10-05": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 618,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 20
+  },
+  "2026-10-06": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 619,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 20
+  },
+  "2026-10-07": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 618,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 20
+  },
+  "2026-10-08": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 621,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 20
+  },
+  "2026-10-09": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 623,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 20
+  },
+  "2026-10-10": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 623,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 21
+  },
+  "2026-10-11": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 624,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-12": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 625,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-13": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 626,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-14": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 626,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-15": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 626,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-16": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 624,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-17": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 625,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-18": {
+    "MyFox2MQTT": 32,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 625,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-19": {
+    "MyFox2MQTT": 33,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 626,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-20": {
+    "MyFox2MQTT": 33,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 626,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-21": {
+    "MyFox2MQTT": 33,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 626,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-22": {
+    "MyFox2MQTT": 33,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 627,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-10-23": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 629,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-10-24": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 630,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-10-25": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 631,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-10-26": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 631,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-10-27": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 630,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-10-28": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 634,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-10-29": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 633,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-10-30": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 633,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-10-31": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 636,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-11-01": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 636,
+    "SomfyProtect2MQTT-2nd-somfy-account": 13,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-11-02": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 5,
+    "SomfyProtect2MQTT": 637,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-11-03": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 640,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-11-04": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 641,
+    "SomfyProtect2MQTT-2nd-somfy-account": 14,
+    "SomfyProtect2MQTT-dev": 22
+  },
+  "2026-11-05": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 647,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-06": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 646,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-07": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 649,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-11-08": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 651,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-11-09": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 653,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-11-10": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 654,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-11-11": {
+    "MyFox2MQTT": 34,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 655,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 23
+  },
+  "2026-11-12": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 658,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-13": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 658,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-14": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 659,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-15": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 661,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-16": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 661,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-17": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 663,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-18": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 664,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-19": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 663,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-20": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 666,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 24
+  },
+  "2026-11-21": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 669,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 25
+  },
+  "2026-11-22": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 675,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 25
+  },
+  "2026-11-23": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 676,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 25
+  },
+  "2026-11-24": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 677,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 25
+  },
+  "2026-11-25": {
+    "MyFox2MQTT": 35,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 676,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 25
+  },
+  "2026-11-26": {
+    "MyFox2MQTT": 36,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 681,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 25
+  },
+  "2026-11-27": {
+    "MyFox2MQTT": 36,
+    "MyFox2MQTT-dev": 6,
+    "SomfyProtect2MQTT": 683,
+    "SomfyProtect2MQTT-2nd-somfy-account": 15,
+    "SomfyProtect2MQTT-dev": 25
+  },
   "2026-11-28": {
     "MyFox2MQTT": 36,
     "MyFox2MQTT-dev": 6,
