@@ -72,7 +72,7 @@ def render_svg(history, configs):
     values = [history[day].get(addon["directory"], 0) for day in days for addon in addons]
     maximum = max(values, default=1)
     left, top, plot_width, plot_height = 70, 55, 820, 230
-    legend_top = 310
+    legend_top = 330
     colors = ["#0969da", "#cf222e", "#1a7f37", "#8250df", "#bf8700"]
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540" role="img">',
@@ -107,6 +107,7 @@ def render_svg(history, configs):
             lines.append(f'<text x="{left + 820}" y="{row_y - 3}" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">{latest_count} installations</text>')
         lines.append(f'<text x="{left}" y="290" fill="#57606a" font-size="11">{days[0]}</text>')
         lines.append(f'<text x="{left + plot_width - 70}" y="290" fill="#57606a" font-size="11">{days[-1]}</text>')
+        lines.append(f'<line x1="{left}" y1="305" x2="{left + plot_width}" y2="305" stroke="white" stroke-width="8"/>')
     lines.append("</svg>")
     return "\n".join(lines) + "\n"
 
