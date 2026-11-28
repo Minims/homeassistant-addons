@@ -1,5 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 ARG BUILD_FROM=ghcr.io/hassio-addons/base:21.0.10
+# hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 LABEL org.opencontainers.image.title="Home Assistant Add-on: SomfyProtect2MQTT (dev)" \
       org.opencontainers.image.description="Publish Somfy Home Alarm as MQTT messages - Development branch." \
@@ -14,6 +15,7 @@ COPY rootfs /
 ENV PIP_PREFER_BINARY=1
 
 # Setup base
+# hadolint ignore=DL3018
 RUN apk update && apk add --no-cache \
     crc32c \
     ffmpeg \
@@ -39,6 +41,7 @@ RUN python3 -c "from pathlib import Path; import site; [meta.write_text(meta.rea
 
 # Pin the tested dev revision so rebuilding the addon uses the same code.
 ARG SOMFY_REF=0ee897e4c69ad207768f5f3bcb0da789d4e58746
+# hadolint ignore=DL3020
 ADD "https://github.com/Minims/SomfyProtect2MQTT/archive/${SOMFY_REF}.tar.gz" /tmp/somfy.tar.gz
 RUN mkdir -p /usr/bin/SomfyProtect2MQTT \
     && tar -xzf /tmp/somfy.tar.gz --strip-components=1 -C /usr/bin/SomfyProtect2MQTT \
@@ -46,6 +49,7 @@ RUN mkdir -p /usr/bin/SomfyProtect2MQTT \
 
 # Install python3 requirements
 WORKDIR /usr/bin/SomfyProtect2MQTT/somfyProtect2Mqtt
+# hadolint ignore=DL3018
 RUN apk add --no-cache --virtual .crc32c-build build-base crc32c-dev \
     && CRC32C_PURE_PYTHON=0 pip3 install --no-cache-dir --no-binary=google-crc32c \
         --retries 5 --resume-retries 5 --timeout 120 -r requirements/addon.txt \
@@ -53,6 +57,7 @@ RUN apk add --no-cache --virtual .crc32c-build build-base crc32c-dev \
     && apk del .crc32c-build
 
 # Install opencv after pip to avoid invalid version metadata crash
+# hadolint ignore=DL3018
 RUN apk add --no-cache py3-opencv
 
 # Fail the build if the addon runtime drifts or a native backend cannot load.

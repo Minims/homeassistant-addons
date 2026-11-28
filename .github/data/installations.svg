@@ -1,84 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 190" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 390" role="img">
 <title>Home Assistant add-on installations over the last year</title>
 <rect width="100%" height="100%" fill="white"/>
-<text x="32" y="14" fill="#24292f" font-size="12">Installations</text>
-<text x="32" y="22" font-size="10">Sep</text>
-<text x="2" y="50" font-size="9">Mon</text>
-<text x="32" y="22" font-size="10">Oct</text>
-<rect x="32" y="120" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-03: 684 installations</title></rect>
-<rect x="48" y="24" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-04: 685 installations</title></rect>
-<text x="2" y="50" font-size="9">Mon</text>
-<rect x="48" y="40" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-05: 689 installations</title></rect>
-<rect x="48" y="56" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-06: 690 installations</title></rect>
-<rect x="48" y="72" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-07: 689 installations</title></rect>
-<rect x="48" y="88" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-08: 692 installations</title></rect>
-<rect x="48" y="104" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-09: 694 installations</title></rect>
-<rect x="48" y="120" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-10: 694 installations</title></rect>
-<rect x="64" y="24" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-11: 696 installations</title></rect>
-<text x="2" y="50" font-size="9">Mon</text>
-<rect x="64" y="40" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-12: 697 installations</title></rect>
-<rect x="64" y="56" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-13: 698 installations</title></rect>
-<rect x="64" y="72" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-14: 698 installations</title></rect>
-<rect x="64" y="88" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-15: 698 installations</title></rect>
-<rect x="64" y="104" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-16: 696 installations</title></rect>
-<rect x="64" y="120" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-17: 697 installations</title></rect>
-<rect x="80" y="24" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-18: 697 installations</title></rect>
-<text x="2" y="50" font-size="9">Mon</text>
-<rect x="80" y="40" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-19: 700 installations</title></rect>
-<rect x="80" y="56" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-20: 700 installations</title></rect>
-<rect x="80" y="72" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-21: 700 installations</title></rect>
-<rect x="80" y="88" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-22: 700 installations</title></rect>
-<rect x="80" y="104" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-23: 704 installations</title></rect>
-<rect x="80" y="120" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-24: 705 installations</title></rect>
-<rect x="96" y="24" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-25: 706 installations</title></rect>
-<text x="2" y="50" font-size="9">Mon</text>
-<rect x="96" y="40" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-26: 706 installations</title></rect>
-<rect x="96" y="56" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-27: 705 installations</title></rect>
-<rect x="96" y="72" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-28: 709 installations</title></rect>
-<rect x="96" y="88" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-29: 708 installations</title></rect>
-<rect x="96" y="104" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-30: 708 installations</title></rect>
-<rect x="96" y="120" width="13" height="13" rx="2" fill="#216e39"><title>2026-10-31: 710 installations</title></rect>
-<text x="112" y="22" font-size="10">Nov</text>
-<rect x="112" y="24" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-01: 710 installations</title></rect>
-<text x="2" y="50" font-size="9">Mon</text>
-<rect x="112" y="40" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-02: 713 installations</title></rect>
-<rect x="112" y="56" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-03: 717 installations</title></rect>
-<rect x="112" y="72" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-04: 718 installations</title></rect>
-<rect x="112" y="88" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-05: 726 installations</title></rect>
-<rect x="112" y="104" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-06: 725 installations</title></rect>
-<rect x="112" y="120" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-07: 727 installations</title></rect>
-<rect x="128" y="24" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-08: 729 installations</title></rect>
-<text x="2" y="50" font-size="9">Mon</text>
-<rect x="128" y="40" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-09: 731 installations</title></rect>
-<rect x="128" y="56" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-10: 732 installations</title></rect>
-<rect x="128" y="72" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-11: 733 installations</title></rect>
-<rect x="128" y="88" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-12: 738 installations</title></rect>
-<rect x="128" y="104" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-13: 738 installations</title></rect>
-<rect x="128" y="120" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-14: 739 installations</title></rect>
-<rect x="144" y="24" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-15: 741 installations</title></rect>
-<text x="2" y="50" font-size="9">Mon</text>
-<rect x="144" y="40" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-16: 741 installations</title></rect>
-<rect x="144" y="56" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-17: 743 installations</title></rect>
-<rect x="144" y="72" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-18: 744 installations</title></rect>
-<rect x="144" y="88" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-19: 743 installations</title></rect>
-<rect x="144" y="104" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-20: 746 installations</title></rect>
-<rect x="144" y="120" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-21: 750 installations</title></rect>
-<rect x="160" y="24" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-22: 756 installations</title></rect>
-<text x="2" y="50" font-size="9">Mon</text>
-<rect x="160" y="40" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-23: 757 installations</title></rect>
-<rect x="160" y="56" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-24: 758 installations</title></rect>
-<rect x="160" y="72" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-25: 757 installations</title></rect>
-<rect x="160" y="88" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-26: 763 installations</title></rect>
-<rect x="160" y="104" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-27: 765 installations</title></rect>
-<rect x="160" y="120" width="13" height="13" rx="2" fill="#216e39"><title>2026-11-28: 767 installations</title></rect>
-<text x="780" y="44" fill="#24292f" font-size="11">installations</text>
-<rect x="780" y="58" width="16" height="16" rx="2" fill="#ebedf0"/>
-<rect x="804" y="58" width="16" height="16" rx="2" fill="#9be9a8"/>
-<rect x="828" y="58" width="16" height="16" rx="2" fill="#40c463"/>
-<rect x="852" y="58" width="16" height="16" rx="2" fill="#30a14e"/>
-<rect x="876" y="58" width="16" height="16" rx="2" fill="#216e39"/>
-<text x="780" y="90" font-size="10">0</text>
-<text x="876" y="90" font-size="10">767 installations</text>
-<text x="32" y="170" font-size="10">2026-10-03</text>
-<text x="722" y="170" font-size="10">2026-11-28</text>
+<text x="70" y="22" fill="#24292f" font-size="16" font-weight="bold">Add-on installation history</text>
+<text x="18" y="58" fill="#57606a" font-size="11" transform="rotate(-90 18 58)">installations</text>
+<line x1="70" y1="335.0" x2="890" y2="335.0" stroke="#d0d7de"/>
+<text x="62" y="339.0" text-anchor="end" fill="#57606a" font-size="11">0</text>
+<line x1="70" y1="265.0" x2="890" y2="265.0" stroke="#d0d7de"/>
+<text x="62" y="269.0" text-anchor="end" fill="#57606a" font-size="11">171</text>
+<line x1="70" y1="195.0" x2="890" y2="195.0" stroke="#d0d7de"/>
+<text x="62" y="199.0" text-anchor="end" fill="#57606a" font-size="11">342</text>
+<line x1="70" y1="125.0" x2="890" y2="125.0" stroke="#d0d7de"/>
+<text x="62" y="129.0" text-anchor="end" fill="#57606a" font-size="11">514</text>
+<line x1="70" y1="55.0" x2="890" y2="55.0" stroke="#d0d7de"/>
+<text x="62" y="59.0" text-anchor="end" fill="#57606a" font-size="11">685</text>
+<polyline points="70.0,321.5 84.6,321.5 99.3,321.9 113.9,321.9 128.6,321.9 143.2,321.9 157.9,321.9 172.5,321.9 187.1,321.9 201.8,321.9 216.4,321.9 231.1,321.9 245.7,321.9 260.4,321.9 275.0,321.9 289.6,321.9 304.3,321.5 318.9,321.5 333.6,321.5 348.2,321.5 362.9,321.1 377.5,321.1 392.1,321.1 406.8,321.1 421.4,321.1 436.1,321.1 450.7,321.1 465.4,321.1 480.0,321.1 494.6,321.1 509.3,320.7 523.9,320.7 538.6,320.7 553.2,321.1 567.9,321.1 582.5,321.1 597.1,321.1 611.8,321.1 626.4,321.1 641.1,321.1 655.7,320.7 670.4,320.7 685.0,320.7 699.6,320.7 714.3,320.7 728.9,320.7 743.6,320.7 758.2,320.7 772.9,320.7 787.5,320.7 802.1,320.7 816.8,320.7 831.4,320.7 846.1,320.7 860.7,320.3 875.4,320.3 890.0,320.3" fill="none" stroke="#0969da" stroke-width="2.5"/>
+<circle cx="890.0" cy="320.3" r="3" fill="#0969da"/>
+<line x1="70" y1="365" x2="88" y2="365" stroke="#0969da" stroke-width="3"/>
+<text x="94" y="369" fill="#24292f" font-size="11">MyFox2MQTT</text>
+<polyline points="70.0,333.0 84.6,333.0 99.3,333.0 113.9,333.0 128.6,333.0 143.2,333.0 157.9,333.0 172.5,333.0 187.1,333.0 201.8,333.0 216.4,333.0 231.1,333.0 245.7,333.0 260.4,333.0 275.0,333.0 289.6,333.0 304.3,333.0 318.9,333.0 333.6,333.0 348.2,333.0 362.9,333.0 377.5,333.0 392.1,333.0 406.8,333.0 421.4,333.0 436.1,333.0 450.7,333.0 465.4,333.0 480.0,333.0 494.6,333.0 509.3,333.0 523.9,332.5 538.6,332.5 553.2,332.5 567.9,332.5 582.5,332.5 597.1,332.5 611.8,332.5 626.4,332.5 641.1,332.5 655.7,332.5 670.4,332.5 685.0,332.5 699.6,332.5 714.3,332.5 728.9,332.5 743.6,332.5 758.2,332.5 772.9,332.5 787.5,332.5 802.1,332.5 816.8,332.5 831.4,332.5 846.1,332.5 860.7,332.5 875.4,332.5 890.0,332.5" fill="none" stroke="#cf222e" stroke-width="2.5"/>
+<circle cx="890.0" cy="332.5" r="3" fill="#cf222e"/>
+<line x1="245" y1="365" x2="263" y2="365" stroke="#cf222e" stroke-width="3"/>
+<text x="269" y="369" fill="#24292f" font-size="11">MyFox2MQTT-dev</text>
+<polyline points="70.0,84.4 84.6,84.4 99.3,82.4 113.9,82.0 128.6,82.4 143.2,81.2 157.9,80.3 172.5,80.3 187.1,79.9 201.8,79.5 216.4,79.1 231.1,79.1 245.7,79.1 260.4,79.9 275.0,79.5 289.6,79.5 304.3,79.1 318.9,79.1 333.6,79.1 348.2,78.7 362.9,77.9 377.5,77.5 392.1,77.1 406.8,77.1 421.4,77.5 436.1,75.8 450.7,76.3 465.4,76.3 480.0,75.0 494.6,75.0 509.3,74.6 523.9,73.4 538.6,73.0 553.2,70.5 567.9,70.9 582.5,69.7 597.1,68.9 611.8,68.1 626.4,67.7 641.1,67.3 655.7,66.0 670.4,66.0 685.0,65.6 699.6,64.8 714.3,64.8 728.9,64.0 743.6,63.6 758.2,64.0 772.9,62.8 787.5,61.5 802.1,59.1 816.8,58.7 831.4,58.3 846.1,58.7 860.7,56.6 875.4,55.8 890.0,55.0" fill="none" stroke="#1a7f37" stroke-width="2.5"/>
+<circle cx="890.0" cy="55.0" r="3" fill="#1a7f37"/>
+<line x1="420" y1="365" x2="438" y2="365" stroke="#1a7f37" stroke-width="3"/>
+<text x="444" y="369" fill="#24292f" font-size="11">SomfyProtect2MQTT</text>
+<polyline points="70.0,329.7 84.6,329.3 99.3,329.3 113.9,329.3 128.6,329.3 143.2,329.3 157.9,329.3 172.5,329.7 187.1,329.7 201.8,329.7 216.4,329.7 231.1,329.7 245.7,329.7 260.4,329.7 275.0,329.7 289.6,329.7 304.3,329.3 318.9,329.3 333.6,329.3 348.2,329.7 362.9,329.7 377.5,329.7 392.1,329.7 406.8,329.7 421.4,329.7 436.1,329.7 450.7,329.7 465.4,329.7 480.0,329.7 494.6,329.7 509.3,329.3 523.9,329.3 538.6,329.3 553.2,328.9 567.9,328.9 582.5,328.9 597.1,328.9 611.8,328.9 626.4,328.9 641.1,328.9 655.7,328.9 670.4,328.9 685.0,328.9 699.6,328.9 714.3,328.9 728.9,328.9 743.6,328.9 758.2,328.9 772.9,328.9 787.5,328.9 802.1,328.9 816.8,328.9 831.4,328.9 846.1,328.9 860.7,328.9 875.4,328.9 890.0,328.9" fill="none" stroke="#8250df" stroke-width="2.5"/>
+<circle cx="890.0" cy="328.9" r="3" fill="#8250df"/>
+<line x1="595" y1="365" x2="613" y2="365" stroke="#8250df" stroke-width="3"/>
+<text x="619" y="369" fill="#24292f" font-size="11">SomfyProtect2MQTT - 2nd Somfy Account</text>
+<polyline points="70.0,326.8 84.6,326.8 99.3,326.8 113.9,326.8 128.6,326.8 143.2,326.8 157.9,326.8 172.5,326.4 187.1,326.0 201.8,326.0 216.4,326.0 231.1,326.0 245.7,326.0 260.4,326.0 275.0,326.0 289.6,326.0 304.3,326.0 318.9,326.0 333.6,326.0 348.2,326.0 362.9,325.6 377.5,325.6 392.1,325.6 406.8,325.6 421.4,325.6 436.1,325.6 450.7,325.6 465.4,325.6 480.0,326.0 494.6,326.0 509.3,326.0 523.9,326.0 538.6,326.0 553.2,325.2 567.9,325.2 582.5,325.6 597.1,325.6 611.8,325.6 626.4,325.6 641.1,325.6 655.7,325.2 670.4,325.2 685.0,325.2 699.6,325.2 714.3,325.2 728.9,325.2 743.6,325.2 758.2,325.2 772.9,325.2 787.5,324.8 802.1,324.8 816.8,324.8 831.4,324.8 846.1,324.8 860.7,324.8 875.4,324.8 890.0,324.8" fill="none" stroke="#bf8700" stroke-width="2.5"/>
+<circle cx="890.0" cy="324.8" r="3" fill="#bf8700"/>
+<line x1="770" y1="365" x2="788" y2="365" stroke="#bf8700" stroke-width="3"/>
+<text x="794" y="369" fill="#24292f" font-size="11">SomfyProtect2MQTT-dev</text>
+<text x="70" y="350" fill="#57606a" font-size="11">2026-10-03</text>
+<text x="820" y="350" fill="#57606a" font-size="11">2026-11-28</text>
 </svg>

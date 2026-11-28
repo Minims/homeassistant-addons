@@ -68,46 +68,39 @@ def update_history(history, refreshed, counts):
 
 def render_svg(history, configs):
     days = sorted(history)
-    totals = {day: sum(history[day].values()) for day in days}
-    maximum = max(totals.values(), default=0)
-    cell, gap = 13, 3
-    left, top, legend_left = 32, 24, 780
-    colors = ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
+    addons = addon_metadata(configs)
+    values = [history[day].get(addon["directory"], 0) for day in days for addon in addons]
+    maximum = max(values, default=1)
+    left, top, plot_width, plot_height = 70, 55, 820, 280
+    colors = ["#0969da", "#cf222e", "#1a7f37", "#8250df", "#bf8700"]
     lines = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {GRAPH_WIDTH} 190" role="img">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 390" role="img">',
         '<title>Home Assistant add-on installations over the last year</title>',
         '<rect width="100%" height="100%" fill="white"/>',
-        '<text x="32" y="14" fill="#24292f" font-size="12">Installations</text>',
+        '<text x="70" y="22" fill="#24292f" font-size="16" font-weight="bold">Add-on installation history</text>',
+        '<text x="18" y="58" fill="#57606a" font-size="11" transform="rotate(-90 18 58)">installations</text>',
     ]
+    for tick in range(5):
+        value = maximum * tick / 4
+        y = top + plot_height - tick * plot_height / 4
+        lines.append(f'<line x1="{left}" y1="{y:.1f}" x2="{left + plot_width}" y2="{y:.1f}" stroke="#d0d7de"/>')
+        lines.append(f'<text x="{left - 8}" y="{y + 4:.1f}" text-anchor="end" fill="#57606a" font-size="11">{value:.0f}</text>')
     if days:
-        first = date.fromisoformat(days[0])
-        start = first - timedelta(days=(first.weekday() + 1) % 7)
-        for offset in range(((date.fromisoformat(days[-1]) - start).days // 7 + 1) * 7):
-            day = start + timedelta(days=offset)
-            if day.day == 1 or offset == 0:
-                column = offset // 7
-                lines.append(f'<text x="{left + column * (cell + gap)}" y="22" font-size="10">{day:%b}</text>')
-            if offset % 7 == 1:
-                lines.append(f'<text x="2" y="{top + (offset % 7) * (cell + gap) + 10}" font-size="9">Mon</text>')
-            if day.isoformat() not in totals:
-                continue
-            total = totals[day.isoformat()]
-            level = 0 if maximum == 0 else min(4, (total * 4) // maximum + (total > 0))
-            column, row = offset // 7, offset % 7
-            x, y = left + column * (cell + gap), top + row * (cell + gap)
-            lines.append(
-                f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{colors[level]}"><title>{day.isoformat()}: {total} installations</title></rect>'
-            )
-    legend_y = 58
-    lines.append(f'<text x="{legend_left}" y="{legend_y - 14}" fill="#24292f" font-size="11">installations</text>')
-    for index, color in enumerate(colors):
-        x = legend_left + index * 24
-        lines.append(f'<rect x="{x}" y="{legend_y}" width="16" height="16" rx="2" fill="{color}"/>')
-    lines.append(f'<text x="{legend_left}" y="{legend_y + 32}" font-size="10">0</text>')
-    lines.append(f'<text x="{legend_left + 96}" y="{legend_y + 32}" font-size="10">{maximum} installations</text>')
-    if days:
-        lines.append(f'<text x="{left}" y="170" font-size="10">{days[0]}</text>')
-        lines.append(f'<text x="{left + 690}" y="170" font-size="10">{days[-1]}</text>')
+        for index, addon in enumerate(addons):
+            points = []
+            for position, day in enumerate(days):
+                x = left + position * plot_width / max(len(days) - 1, 1)
+                count = history[day].get(addon["directory"], 0)
+                y = top + plot_height - count * plot_height / maximum
+                points.append(f"{x:.1f},{y:.1f}")
+            color = colors[index % len(colors)]
+            lines.append(f'<polyline points="{" ".join(points)}" fill="none" stroke="{color}" stroke-width="2.5"/>')
+            lines.append(f'<circle cx="{points[-1].split(",")[0]}" cy="{points[-1].split(",")[1]}" r="3" fill="{color}"/>')
+            legend_x = left + index * 175
+            lines.append(f'<line x1="{legend_x}" y1="365" x2="{legend_x + 18}" y2="365" stroke="{color}" stroke-width="3"/>')
+            lines.append(f'<text x="{legend_x + 24}" y="369" fill="#24292f" font-size="11">{escape(addon["name"])}</text>')
+        lines.append(f'<text x="{left}" y="350" fill="#57606a" font-size="11">{days[0]}</text>')
+        lines.append(f'<text x="{left + plot_width - 70}" y="350" fill="#57606a" font-size="11">{days[-1]}</text>')
     lines.append("</svg>")
     return "\n".join(lines) + "\n"
 

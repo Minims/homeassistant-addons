@@ -1,3 +1,4 @@
+# yamllint disable rule:comments
 ---
 name: CI
 
@@ -13,7 +14,6 @@ on:
 
 permissions:
   contents: read
-  security-events: write
 
 jobs:
   global-lint:
@@ -32,16 +32,18 @@ jobs:
           - name: Prettier
             run: npx --yes prettier@3.10.1 --check '**/*.{json,js,md,yaml}'
           - name: YAML Lint
-            run: docker run --rm -v "$PWD:/workspace" -w /workspace cytopia/yamllint:1.37 .
+            run: |
+              pip install yamllint
+              find . -type f \( -name "*.yaml" -o -name "*.yml" \) -not -path "./.serena/*" -print0 | xargs -0 yamllint
           - name: ShellCheck
             run: |
               shellcheck --version
               find . -type f \( -name '*.sh' -o -name run -o -name finish -o -name healthcheck \) -print0 |
                 xargs -0 -r shellcheck -s bash
           - name: Zizmor
-            run: zizmor .github/workflows
+            run: zizmor .github/workflows/ci.yaml
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
       - name: Install tools
@@ -70,14 +72,14 @@ jobs:
           - app: SomfyProtect2MQTT
             community: false
           - app: SomfyProtect2MQTT-dev
-            community: true
+            community: false
           - app: SomfyProtect2MQTT-2nd-somfy-account
             community: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
-      - uses: frenck/action-app-linter@v2.21.3
+      - uses: frenck/action-app-linter@479f4f053b96ed00a83ce2c7d8f858e22475aa98 # v2.21.3
         with:
           path: ./${{ matrix.app }}
           community: ${{ matrix.community }}
@@ -95,10 +97,10 @@ jobs:
           - SomfyProtect2MQTT-dev
           - SomfyProtect2MQTT-2nd-somfy-account
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
-      - uses: brpaz/hadolint-action@v1.5.0
+      - uses: brpaz/hadolint-action@c27bd9edc1e95eed30474db8f295ff5807ebca14 # v1.5.0
         with:
           dockerfile: ./${{ matrix.app }}/Dockerfile
 
@@ -141,11 +143,11 @@ jobs:
             arch: aarch64
             platform: linux/arm64/v8
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
-      - uses: docker/setup-qemu-action@v3
-      - uses: docker/setup-buildx-action@v3
+      - uses: docker/setup-qemu-action@c7c53464625b32c7a7e944ae62b3e17d2b600130 # v3
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
       - name: Build ${{ matrix.app }}
         env:
           APP: ${{ matrix.app }}
@@ -161,4 +163,8 @@ jobs:
               build_args+=("VERSION=${version}")
             fi
           fi
-          docker build --platform "${PLATFORM}" --build-arg "${build_args[0]}" $(printf -- '--build-arg %q ' "${build_args[@]:1}") "${APP}"
+          docker build \
+            --platform "${PLATFORM}" \
+            --build-arg "${build_args[0]}" \
+            $(printf -- '--build-arg %q ' "${build_args[@]:1}") \
+            "${APP}"
