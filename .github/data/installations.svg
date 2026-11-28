@@ -23,23 +23,23 @@
 <circle cx="890.0" cy="280.0" r="3" fill="#8250df"/>
 <polyline points="70.0,278.3 84.6,278.3 99.3,278.3 113.9,278.3 128.6,278.3 143.2,278.3 157.9,278.3 172.5,277.9 187.1,277.6 201.8,277.6 216.4,277.6 231.1,277.6 245.7,277.6 260.4,277.6 275.0,277.6 289.6,277.6 304.3,277.6 318.9,277.6 333.6,277.6 348.2,277.6 362.9,277.3 377.5,277.3 392.1,277.3 406.8,277.3 421.4,277.3 436.1,277.3 450.7,277.3 465.4,277.3 480.0,277.6 494.6,277.6 509.3,277.6 523.9,277.6 538.6,277.6 553.2,276.9 567.9,276.9 582.5,277.3 597.1,277.3 611.8,277.3 626.4,277.3 641.1,277.3 655.7,276.9 670.4,276.9 685.0,276.9 699.6,276.9 714.3,276.9 728.9,276.9 743.6,276.9 758.2,276.9 772.9,276.9 787.5,276.6 802.1,276.6 816.8,276.6 831.4,276.6 846.1,276.6 860.7,276.6 875.4,276.6 890.0,276.6" fill="none" stroke="#bf8700" stroke-width="2.5"/>
 <circle cx="890.0" cy="276.6" r="3" fill="#bf8700"/>
-<text x="70" y="316" fill="#57606a" font-size="12">Latest value</text>
-<rect x="70" y="317" width="10" height="10" rx="2" fill="#0969da"/>
-<text x="90" y="327" fill="#24292f" font-size="12">MyFox2MQTT</text>
-<text x="890" y="327" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">36 installations</text>
-<rect x="70" y="349" width="10" height="10" rx="2" fill="#cf222e"/>
-<text x="90" y="359" fill="#24292f" font-size="12">MyFox2MQTT-dev</text>
-<text x="890" y="359" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">6 installations</text>
-<rect x="70" y="381" width="10" height="10" rx="2" fill="#1a7f37"/>
-<text x="90" y="391" fill="#24292f" font-size="12">SomfyProtect2MQTT</text>
-<text x="890" y="391" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">685 installations</text>
-<rect x="70" y="413" width="10" height="10" rx="2" fill="#8250df"/>
-<text x="90" y="423" fill="#24292f" font-size="12">SomfyProtect2MQTT - 2nd Somfy Account</text>
-<text x="890" y="423" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">15 installations</text>
-<rect x="70" y="445" width="10" height="10" rx="2" fill="#bf8700"/>
-<text x="90" y="455" fill="#24292f" font-size="12">SomfyProtect2MQTT-dev</text>
-<text x="890" y="455" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">25 installations</text>
-<text x="70" y="290" fill="#57606a" font-size="11">2026-10-03</text>
-<text x="820" y="290" fill="#57606a" font-size="11">2026-11-28</text>
+<text x="70" y="356" fill="#57606a" font-size="12">Latest value</text>
+<rect x="70" y="357" width="10" height="10" rx="2" fill="#0969da"/>
+<text x="90" y="367" fill="#24292f" font-size="12">MyFox2MQTT</text>
+<text x="890" y="367" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">36 installations</text>
+<rect x="70" y="389" width="10" height="10" rx="2" fill="#cf222e"/>
+<text x="90" y="399" fill="#24292f" font-size="12">MyFox2MQTT-dev</text>
+<text x="890" y="399" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">6 installations</text>
+<rect x="70" y="421" width="10" height="10" rx="2" fill="#1a7f37"/>
+<text x="90" y="431" fill="#24292f" font-size="12">SomfyProtect2MQTT</text>
+<text x="890" y="431" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">685 installations</text>
+<rect x="70" y="453" width="10" height="10" rx="2" fill="#8250df"/>
+<text x="90" y="463" fill="#24292f" font-size="12">SomfyProtect2MQTT - 2nd Somfy Account</text>
+<text x="890" y="463" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">15 installations</text>
+<rect x="70" y="485" width="10" height="10" rx="2" fill="#bf8700"/>
+<text x="90" y="495" fill="#24292f" font-size="12">SomfyProtect2MQTT-dev</text>
+<text x="890" y="495" text-anchor="end" fill="#24292f" font-size="12" font-weight="bold">25 installations</text>
+<text x="70" y="300" fill="#57606a" font-size="11">2026-10-03</text>
+<text x="820" y="300" fill="#57606a" font-size="11">2026-11-28</text>
 <line x1="70" y1="305" x2="890" y2="305" stroke="white" stroke-width="8"/>
 </svg>
