@@ -19,10 +19,10 @@ counts = {
 }
 configs = sorted(root.glob("*/config.yaml"))
 updated = update(original, counts, configs)
-assert "[SomfyProtect2MQTT](./SomfyProtect2MQTT) | 613 |" in updated
-assert "[SomfyProtect2MQTT-dev](./SomfyProtect2MQTT-dev) | 20 |" in updated
-assert "[MyFox2MQTT-dev](./MyFox2MQTT-dev) | 0 |" in updated
-assert updated.count("](./") == len(configs)
+assert "Last refreshed:" in updated
+assert "[SomfyProtect2MQTT](./SomfyProtect2MQTT) |" not in updated
+assert "[SomfyProtect2MQTT-dev](./SomfyProtect2MQTT-dev) |" not in updated
+assert "[MyFox2MQTT-dev](./MyFox2MQTT-dev) |" not in updated
 assert updated.startswith("Before\n") and updated.endswith("\nAfter\n")
 assert update(updated, counts, configs) == updated
 for readme, analytics in [

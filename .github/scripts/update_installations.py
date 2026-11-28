@@ -96,9 +96,10 @@ def render_svg(history, configs):
             color = colors[index % len(colors)]
             lines.append(f'<polyline points="{" ".join(points)}" fill="none" stroke="{color}" stroke-width="2.5"/>')
             lines.append(f'<circle cx="{points[-1].split(",")[0]}" cy="{points[-1].split(",")[1]}" r="3" fill="{color}"/>')
-            legend_x = left + index * 175
+            legend_x = left + index * 210
+            latest_count = history[days[-1]].get(addon["directory"], 0)
             lines.append(f'<line x1="{legend_x}" y1="365" x2="{legend_x + 18}" y2="365" stroke="{color}" stroke-width="3"/>')
-            lines.append(f'<text x="{legend_x + 24}" y="369" fill="#24292f" font-size="11">{escape(addon["name"])}</text>')
+            lines.append(f'<text x="{legend_x + 24}" y="369" fill="#24292f" font-size="11">{escape(addon["name"])}: {latest_count} installations</text>')
         lines.append(f'<text x="{left}" y="350" fill="#57606a" font-size="11">{days[0]}</text>')
         lines.append(f'<text x="{left + plot_width - 70}" y="350" fill="#57606a" font-size="11">{days[-1]}</text>')
     lines.append("</svg>")
@@ -107,13 +108,11 @@ def render_svg(history, configs):
 
 def readme_with_installations(readme, analytics, configs, refreshed=None):
     refreshed = refreshed or datetime.now(timezone.utc).date().isoformat()
-    rows = installation_rows(analytics, configs)
+    installation_counts(analytics, configs)
     section = "\n".join(
         [
             "<!-- installations:start -->", "",
-            "| Add-on | Reported installations |",
-            "| --- | ---: |",
-            *rows, "", f"Last refreshed: {refreshed} (UTC).", "",
+            f"Last refreshed: {refreshed} (UTC).", "",
             "<!-- installations:end -->",
         ]
     )
