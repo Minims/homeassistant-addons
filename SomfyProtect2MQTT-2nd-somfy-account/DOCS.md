@@ -138,3 +138,23 @@ Port used by the HLS server. The default is `8090`.
 ### Option `debug`
 
 Enable/Disable debug mode.
+
+## Runtime and development checks
+
+The addon uses Python 3.14 from its Alpine base. Its Dockerfile downloads the
+stable SomfyProtect2MQTT `2026.11.6` release. The image build checks native
+CRC32C and OpenCV's FFmpeg backend.
+
+Generated configuration and the Somfy token cache are stored in `/data/config.yaml`
+and `/data/token.json`. Configure the addon through Home Assistant's options.
+The startup script does not print the configuration or credentials.
+
+To test startup locally, install Python 3.14, Bash, and
+[mikefarah/yq](https://github.com/mikefarah/yq), then run from the repository root:
+
+```sh
+python3 -m unittest discover -s SomfyProtect2MQTT-2nd-somfy-account/tests -v
+shellcheck SomfyProtect2MQTT-2nd-somfy-account/rootfs/etc/s6-overlay/s6-rc.d/SomfyProtect2MQTT/{run,finish}
+```
+
+Tests use temporary files and a Supervisor stub; no Somfy account is needed.
