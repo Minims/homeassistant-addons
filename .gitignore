@@ -13,3 +13,6 @@ token.json
 # Logs
 *.log
 **/*.log
+
+# Outils locaux
+.serena/

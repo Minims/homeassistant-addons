@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026.11.6
+
+- Updated: Pin SomfyProtect2MQTT to the 2026.11.6 release
+
 ## 2026.11.5 (dev)
 
 - Fixed: Retry server-initiated WebRTC hang-ups with bounded 2, 5 and 15 second backoff
