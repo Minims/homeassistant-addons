@@ -35,18 +35,7 @@ RUN apk update && apk add --no-cache \
     yq
 
 # Fix Alpine dist-info version strings so pip can parse them
-RUN python3 - <<'PY'
-from pathlib import Path
-import site
-
-for base in map(Path, site.getsitepackages()):
-    if not base.exists():
-        continue
-    for meta in base.rglob("*.dist-info/METADATA"):
-        text = meta.read_text()
-        if "Version: python-" in text:
-            meta.write_text(text.replace("Version: python-", "Version: "))
-PY
+RUN python3 -c "from pathlib import Path; import site; [meta.write_text(meta.read_text().replace('Version: python-', 'Version: ')) for base in map(Path, site.getsitepackages()) if base.exists() for meta in base.rglob('*.dist-info/METADATA') if 'Version: python-' in meta.read_text()]"
 
 # Pin the tested dev revision so rebuilding the addon uses the same code.
 ARG SOMFY_REF=0ee897e4c69ad207768f5f3bcb0da789d4e58746
